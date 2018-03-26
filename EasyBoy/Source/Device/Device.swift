@@ -37,3 +37,14 @@ public struct Device {
 
 }
 
+
+#if os(OSX)
+extension Device {
+
+    static public func version() -> String {
+        return String(describing: model()) + " " + String(describing: sizeInches()) + "-inch"
+    }
+
+}
+#endif
+
