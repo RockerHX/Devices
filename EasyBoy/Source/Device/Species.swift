@@ -35,6 +35,9 @@ extension Device {
 
         case AppleTV
 
+        #elseif os(watchOS)
+
+        case iWatch
 
         #endif
 
