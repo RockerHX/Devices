@@ -9,7 +9,7 @@
 
 extension Device {
 
-    public enum Species: String {
+    public enum Family: String {
 
         case unknown
 
@@ -49,7 +49,7 @@ extension Device {
 // MARK: - Species Methods -
 extension Device {
 
-    static fileprivate func getSpecies(byCode code: String) -> Species {
+    static fileprivate func getSpecies(byCode code: String) -> Family {
         #if os(iOS)
             if code.contains("iPhone") {
                 return .iPhone
@@ -89,7 +89,7 @@ extension Device {
         #endif
     }
 
-    static public func species() -> Species {
+    static public func species() -> Family {
         return getSpecies(byCode: code())
     }
 

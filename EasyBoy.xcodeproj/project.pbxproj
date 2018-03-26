@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C64552D7206898E1007107AA /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64552D5206898E1007107AA /* Species.swift */; };
+		C64552D7206898E1007107AA /* Family.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64552D5206898E1007107AA /* Family.swift */; };
 		C64552D8206898E1007107AA /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64552D6206898E1007107AA /* Model.swift */; };
 		C663D59B2064B071008F2276 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C663D59A2064B071008F2276 /* AppDelegate.swift */; };
 		C663D59D2064B071008F2276 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C663D59C2064B071008F2276 /* ViewController.swift */; };
@@ -38,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C64552D5206898E1007107AA /* Species.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Species.swift; sourceTree = "<group>"; };
+		C64552D5206898E1007107AA /* Family.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Family.swift; sourceTree = "<group>"; };
 		C64552D6206898E1007107AA /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		C663D5972064B071008F2276 /* EasyBoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyBoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C663D59A2064B071008F2276 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -145,7 +145,7 @@
 		C663D5C92064B093008F2276 /* Device */ = {
 			isa = PBXGroup;
 			children = (
-				C64552D5206898E1007107AA /* Species.swift */,
+				C64552D5206898E1007107AA /* Family.swift */,
 				C64552D6206898E1007107AA /* Model.swift */,
 				C663D5CC2064B18A008F2276 /* Size.swift */,
 				C663D5D02064B29C008F2276 /* Device.swift */,
@@ -291,7 +291,7 @@
 				C663D59D2064B071008F2276 /* ViewController.swift in Sources */,
 				C663D5D12064B29C008F2276 /* Device.swift in Sources */,
 				C64552D8206898E1007107AA /* Model.swift in Sources */,
-				C64552D7206898E1007107AA /* Species.swift in Sources */,
+				C64552D7206898E1007107AA /* Family.swift in Sources */,
 				C663D59B2064B071008F2276 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
