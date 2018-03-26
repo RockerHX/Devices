@@ -14,6 +14,10 @@
 		C663D5A52064B071008F2276 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C663D5A32064B071008F2276 /* LaunchScreen.storyboard */; };
 		C663D5B02064B072008F2276 /* EasyBoyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C663D5AF2064B072008F2276 /* EasyBoyTests.swift */; };
 		C663D5BB2064B072008F2276 /* EasyBoyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C663D5BA2064B072008F2276 /* EasyBoyUITests.swift */; };
+		C663D5CD2064B18A008F2276 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = C663D5CC2064B18A008F2276 /* Size.swift */; };
+		C663D5CF2064B241008F2276 /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = C663D5CE2064B241008F2276 /* Species.swift */; };
+		C663D5D12064B29C008F2276 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = C663D5D02064B29C008F2276 /* Device.swift */; };
+		C663D5D32064E5F4008F2276 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C663D5D22064E5F4008F2276 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		C663D5B62064B072008F2276 /* EasyBoyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyBoyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C663D5BA2064B072008F2276 /* EasyBoyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyBoyUITests.swift; sourceTree = "<group>"; };
 		C663D5BC2064B072008F2276 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C663D5CC2064B18A008F2276 /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
+		C663D5CE2064B241008F2276 /* Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Species.swift; sourceTree = "<group>"; };
+		C663D5D02064B29C008F2276 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		C663D5D22064E5F4008F2276 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,7 @@
 		C663D5992064B071008F2276 /* EasyBoy */ = {
 			isa = PBXGroup;
 			children = (
+				C663D5C82064B093008F2276 /* Source */,
 				C663D59A2064B071008F2276 /* AppDelegate.swift */,
 				C663D59C2064B071008F2276 /* ViewController.swift */,
 				C663D59E2064B071008F2276 /* Main.storyboard */,
@@ -123,6 +132,25 @@
 				C663D5BC2064B072008F2276 /* Info.plist */,
 			);
 			path = EasyBoyUITests;
+			sourceTree = "<group>";
+		};
+		C663D5C82064B093008F2276 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				C663D5C92064B093008F2276 /* Device */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		C663D5C92064B093008F2276 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				C663D5CE2064B241008F2276 /* Species.swift */,
+				C663D5D22064E5F4008F2276 /* Model.swift */,
+				C663D5CC2064B18A008F2276 /* Size.swift */,
+				C663D5D02064B29C008F2276 /* Device.swift */,
+			);
+			path = Device;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +287,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C663D5CF2064B241008F2276 /* Species.swift in Sources */,
+				C663D5CD2064B18A008F2276 /* Size.swift in Sources */,
 				C663D59D2064B071008F2276 /* ViewController.swift in Sources */,
+				C663D5D32064E5F4008F2276 /* Model.swift in Sources */,
+				C663D5D12064B29C008F2276 /* Device.swift in Sources */,
 				C663D59B2064B071008F2276 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
