@@ -13,10 +13,18 @@ import UIKit
 public struct Device {
 
     static fileprivate func getCode() -> String {
+        #if os(iOS)
         var systemInfo = utsname()
         uname(&systemInfo)
         let code: String = String(validatingUTF8: NSString(bytes: &systemInfo.machine, length: Int(_SYS_NAMELEN), encoding: String.Encoding.ascii.rawValue)!.utf8String!)!
         return code
+        #elseif os(OSX)
+        var size : Int = 0
+        sysctlbyname("hw.model", nil, &size, nil, 0)
+        var model = [CChar](repeating: 0, count: Int(size))
+        sysctlbyname("hw.model", &model, &size, nil, 0)
+        return String.init(validatingUTF8: model) ?? ""
+        #endif
     }
 
 }
