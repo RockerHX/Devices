@@ -7,6 +7,9 @@
 //
 
 
+import UIKit
+
+
 extension Device {
 
     public enum Size: Int, Comparable {
@@ -63,6 +66,50 @@ extension Device {
             return lhs.rawValue != rhs.rawValue
         }
 
+    }
+
+}
+
+
+// MARK: - Size Methods -
+extension Device {
+
+    static public func size() -> Size {
+        let width: Double = Double(UIScreen.main.bounds.width)
+        let height: Double = Double(UIScreen.main.bounds.height)
+        let screenHeight: Double = max(width, height)
+
+        switch screenHeight {
+        case 480:
+            return .screen3_5Inch
+        case 568:
+            return .screen4Inch
+        case 667:
+            return (UIScreen.main.scale == 3.0) ? .screen5_5Inch : .screen4_7Inch
+        case 736:
+            return .screen5_5Inch
+        case 812:
+            return .screen5_8Inch
+        case 1024:
+            switch model() {
+            case .iPadMini, .iPadMini2, .iPadMini3, .iPadMini4:
+                return .screen7_9Inch
+            case .iPadPro10_5Inch:
+                return .screen10_5Inch
+            default:
+                return .screen9_7Inch
+            }
+        case 1112:
+            return .screen10_5Inch
+        case 1366:
+            return .screen12_9Inch
+        default:
+            return .unknown
+        }
+    }
+
+    static public func isRetina() -> Bool {
+        return UIScreen.main.scale > 1.0
     }
 
 }
