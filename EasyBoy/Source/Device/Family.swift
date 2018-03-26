@@ -46,67 +46,67 @@ extension Device {
 }
 
 
-// MARK: - Species Methods -
+// MARK: - Family Methods -
 extension Device {
 
-    static fileprivate func getSpecies(byCode code: String) -> Family {
+    static fileprivate func getFamily(byCode code: String) -> Family {
         #if os(iOS)
-            if code.contains("iPhone") {
-                return .iPhone
-            } else if code.contains("iPad") {
-                return .iPad
-            } else if code.contains("iPod") {
-                return .iPodtouch
-            } else if code == "i386" || code == "x86_64" {
-                return .simulator
-            } else {
-                return .unknown
-            }
+        if code.contains("iPhone") {
+            return .iPhone
+        } else if code.contains("iPad") {
+            return .iPad
+        } else if code.contains("iPod") {
+            return .iPodtouch
+        } else if code == "i386" || code == "x86_64" {
+            return .simulator
+        } else {
+            return .unknown
+        }
         #elseif os(OSX)
-            if code.hasPrefix("MacMini") {
-                return .MacMini
-            } else if code.hasPrefix("MacBookAir") {
-                return .MacBookAir
-            } else if code.hasPrefix("MacBook") {
-                return .MacBook
-            } else if code.hasPrefix("MacBookPro") {
-                return .MacBookPro
-            } else if code.hasPrefix("iMac") {
-                return .iMac
-            } else if code.hasPrefix("iMacPro") {
-                return .iMacPro
-            } else if code.hasPrefix("MacPro") {
-                return .MacPro
-            } else if code.hasPrefix("Xserve") {
-                return .Xserve
-            } else {
-                return .unknown
-            }
+        if code.hasPrefix("MacMini") {
+            return .MacMini
+        } else if code.hasPrefix("MacBookAir") {
+            return .MacBookAir
+        } else if code.hasPrefix("MacBook") {
+            return .MacBook
+        } else if code.hasPrefix("MacBookPro") {
+            return .MacBookPro
+        } else if code.hasPrefix("iMac") {
+            return .iMac
+        } else if code.hasPrefix("iMacPro") {
+            return .iMacPro
+        } else if code.hasPrefix("MacPro") {
+            return .MacPro
+        } else if code.hasPrefix("Xserve") {
+            return .Xserve
+        } else {
+            return .unknown
+        }
         #elseif os(tvOS)
-            return .AppleTV
+        return .AppleTV
         #elseif os(watchOS)
-            return .AppleWatch
+        return .AppleWatch
         #endif
     }
 
-    static public func species() -> Family {
-        return getSpecies(byCode: code())
+    static public func family() -> Family {
+        return getFamily(byCode: code())
     }
 
     static public func isPad() -> Bool {
-        return species() == .iPad
+        return family() == .iPad
     }
 
     static public func isPhone() -> Bool {
-        return species() == .iPhone
+        return family() == .iPhone
     }
 
     static public func isPod() -> Bool {
-        return species() == .iPodtouch
+        return family() == .iPodtouch
     }
 
     static public func isSimulator() -> Bool {
-        return species() == .simulator
+        return family() == .simulator
     }
 
 }
