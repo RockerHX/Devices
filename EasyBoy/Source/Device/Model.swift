@@ -61,7 +61,10 @@ extension Device {
 
         #elseif os(tvOS)
 
-        case AppleTV
+        case AppleTV1Gen
+        case AppleTV2Gen
+        case AppleTV3Gen
+        case AppleTV4Gen
         case AppleTV4K
 
         #elseif os(watchOS)
@@ -128,7 +131,14 @@ extension Device {
         #elseif os(OSX)
         return .mac
         #elseif os(tvOS)
-
+        switch code {
+        case "AppleTV1,1":               return .AppleTV1Gen
+        case "AppleTV2,1":               return .AppleTV2Gen
+        case "AppleTV3,1", "AppleTV3,2": return .AppleTV3Gen
+        case "AppleTV5,3":               return .AppleTV4Gen
+        case "AppleTV6,2":               return .AppleTV4K
+        default:                         return .unknown
+        }
         #elseif os(watchOS)
         switch code {
         case "Watch1,1", "Watch1,2":                         return .AppleWatch
@@ -137,7 +147,6 @@ extension Device {
         case "Watch3,1", "Watch3,2", "Watch3,3", "Watch3,4": return .AppleWatchSeries3
         default:                                             return .unknown
         }
-
         #endif
     }
 
