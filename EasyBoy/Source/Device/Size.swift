@@ -7,9 +7,6 @@
 //
 
 
-import UIKit
-
-
 extension Device {
 
     public enum Size: Int, Comparable {
@@ -71,6 +68,12 @@ extension Device {
 }
 
 
+#if os(iOS)
+
+
+import UIKit
+
+
 // MARK: - Size Methods -
 extension Device {
 
@@ -113,4 +116,52 @@ extension Device {
     }
 
 }
+
+
+#elseif os(OSX)
+
+
+import Cocoa
+
+
+// MARK: - Size Methods -
+extension Device {
+
+    private static func sizeInches() -> CGFloat {
+        let screen = NSScreen.main()
+        let description = screen?.deviceDescription
+        let physicalSize = CGDisplayScreenSize(description?["NSScreenNumber"] as? CGDirectDisplayID ?? 0)
+        return floor(sqrt(pow(physicalSize.width, 2) + pow(physicalSize.height, 2)) * 0.0393701);
+    }
+
+    static public func size() -> Size {
+        let size = sizeInches()
+
+        switch size {
+        case 11:
+            return .screen11Inch
+        case 12:
+            return .screen12Inch
+        case 13:
+            return .screen13Inch
+        case 15:
+            return .screen15Inch
+        case 17:
+            return .screen17Inch
+        case 20:
+            return .screen20Inch
+        case 21:
+            return .screen21_5Inch
+        case 24:
+            return .screen24Inch
+        case 27:
+            return .screen27Inch
+        default:
+            return .unknown
+        }
+    }
+
+}
+
+#endif
 
