@@ -69,7 +69,7 @@ extension Device {
         #elseif os(tvOS)
         return .AppleTV
         #elseif os(watchOS)
-        return .iWatch
+        return .AppleWatch
         #endif
     }
 

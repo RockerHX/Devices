@@ -37,7 +37,7 @@ extension Device {
 
         #elseif os(watchOS)
 
-        case iWatch
+        case AppleWatch
 
         #endif
 
