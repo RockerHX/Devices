@@ -135,7 +135,7 @@ extension Device {
         case "Watch2,6", "Watch2,7":                         return .AppleWatchSeries1
         case "Watch2,3", "Watch2,4":                         return .AppleWatchSeries2
         case "Watch3,1", "Watch3,2", "Watch3,3", "Watch3,4": return .AppleWatchSeries3
-        default: return .unknown
+        default:                                             return .unknown
         }
 
         #endif
