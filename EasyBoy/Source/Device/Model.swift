@@ -17,10 +17,6 @@ extension Device {
         #if os(iOS)
 
         /*** iPod ***/
-        case iPodTouch1Gen
-        case iPodTouch2Gen
-        case iPodTouch3Gen
-        case iPodTouch4Gen
         case iPodTouch5Gen
         case iPodTouch6Gen
         /*** iPhone ***/
@@ -40,8 +36,6 @@ extension Device {
         case iPhone8Plus
         case iPhoneX
         /*** iPad ***/
-        case iPad1
-        case iPad2
         case iPad3
         case iPad4
         case iPad5
@@ -88,10 +82,6 @@ extension Device {
         #if os(iOS)
         switch code {
         /*** iPod touch ***/
-        case "iPod1,1":                                  return .iPodTouch1Gen
-        case "iPod2,1":                                  return .iPodTouch2Gen
-        case "iPod3,1":                                  return .iPodTouch3Gen
-        case "iPod4,1":                                  return .iPodTouch4Gen
         case "iPod5,1":                                  return .iPodTouch5Gen
         case "iPod7,1":                                  return .iPodTouch6Gen
         /*** iPhone ***/
@@ -111,8 +101,6 @@ extension Device {
         case "iPhone10,2", "iPhone10,5":                 return .iPhone8Plus
         case "iPhone10,3", "iPhone10,6":                 return .iPhoneX
         /*** iPad ***/
-        case "iPad1,1":                                  return .iPad1
-        case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4": return .iPad2
         case "iPad3,1", "iPad3,2", "iPad3,3":            return .iPad3
         case "iPad3,4", "iPad3,5", "iPad3,6":            return .iPad4
         case "iPad6,11", "iPad6,12":                     return .iPad5
