@@ -7,6 +7,9 @@
 //
 
 
+// Apple Device Wiki: https://www.theiphonewiki.com/wiki
+
+
 import UIKit
 
 
