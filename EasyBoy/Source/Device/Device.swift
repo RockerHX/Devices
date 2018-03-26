@@ -34,6 +34,7 @@ public struct Device {
 extension Device {
 
     static fileprivate func getSpecies(byCode code: String) -> Species {
+        #if os(iOS)
         if code.contains("iPhone") {
             return .iPhone
         } else if code.contains("iPad") {
@@ -45,6 +46,27 @@ extension Device {
         } else {
             return .unknown
         }
+        #elseif os(OSX)
+        if code.hasPrefix("MacMini") {
+            return .MacMini
+        } else if code.hasPrefix("MacBookAir") {
+            return .MacBookAir
+        } else if code.hasPrefix("MacBook") {
+            return .MacBook
+        } else if code.hasPrefix("MacBookPro") {
+            return .MacBookPro
+        } else if code.hasPrefix("iMac") {
+            return .iMac
+        } else if code.hasPrefix("iMacPro") {
+            return .iMacPro
+        } else if code.hasPrefix("MacPro") {
+            return .MacPro
+        } else if code.hasPrefix("Xserve") {
+            return .Xserve
+        } else {
+            return .unknown
+        }
+        #endif
     }
 
     static public func species() -> Species {
