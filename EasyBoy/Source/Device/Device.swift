@@ -66,6 +66,8 @@ extension Device {
         } else {
             return .unknown
         }
+        #elseif os(tvOS)
+        return .AppleTV
         #endif
     }
 

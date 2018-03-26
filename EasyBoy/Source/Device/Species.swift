@@ -31,6 +31,10 @@ extension Device {
         case MacPro
         case XServe
 
+        #elseif os(tvOS)
+
+        case AppleTV
+
 
         #endif
 
