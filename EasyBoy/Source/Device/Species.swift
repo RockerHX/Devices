@@ -22,13 +22,15 @@ extension Device {
 
         #elseif os(OSX)
 
-        case macMini
-        case macBookAir
-        case macBook
-        case macBookPro
+        case MacMini
+        case MacBookAir
+        case MacBook
+        case MacBookPro
         case iMac
-        case macPro
-        case xServe
+        case iMacPro
+        case MacPro
+        case XServe
+
 
         #endif
 
