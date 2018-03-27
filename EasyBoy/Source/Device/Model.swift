@@ -7,15 +7,13 @@
 //
 
 
+import Foundation
+
+
 extension Device {
 
-    public enum Model: String {
-
-        /*** unknown ***/
-        case unknown
-
+    public enum Model {
         #if os(iOS)
-
         /*** iPod ***/
         case iPodTouch5Gen
         case iPodTouch6Gen
@@ -48,28 +46,24 @@ extension Device {
         case iPadPro9_7Inch
         case iPadPro10_5Inch
         case iPadPro12_9Inch
-
         #elseif os(OSX)
-
         case mac
-
         #elseif os(tvOS)
-
         case AppleTV1Gen
         case AppleTV2Gen
         case AppleTV3Gen
         case AppleTV4Gen
         case AppleTV4K
-
         #elseif os(watchOS)
-
         case AppleWatch
         case AppleWatchSeries1
         case AppleWatchSeries2
         case AppleWatchSeries3
-
         #endif
-
+        /*** Simulator ***/
+        indirect case simulator(Model)
+        /*** unknown ***/
+        case unknown
     }
 
 }
@@ -79,6 +73,9 @@ extension Device {
 extension Device {
 
     static fileprivate func getModel(byCode code: String) -> Model {
+        if code == "i386" || code == "x86_64" {
+            return .simulator(getModel(byCode: ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] ?? ""))
+        }
         #if os(iOS)
         switch code {
         /*** iPod touch ***/
