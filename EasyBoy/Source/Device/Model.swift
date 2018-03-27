@@ -7,7 +7,7 @@
 //
 
 
-import Foundation
+import UIKit
 
 
 extension Device {
@@ -223,4 +223,46 @@ extension Device {
     }
 
 }
+
+
+#if os(iOS)
+extension Device.Model {
+    /// Returns whether the device is an iPod (real or simulator)
+    public var isPod: Bool {
+        return (Device.Model.allPods.contains(self) || Device.Model.allSimulatorPods.contains(self))
+    }
+
+    /// Returns whether the device is an iPhone (real or simulator)
+    public var isPhone: Bool {
+        return ((Device.Model.allPhones.contains(self) ||
+            Device.Model.allSimulatorPhones.contains(self) ||
+            UIDevice.current.userInterfaceIdiom == .phone) &&
+            !isPod)
+    }
+
+    /// Returns whether the device is an iPad (real or simulator)
+    public var isPad: Bool {
+        return (Device.Model.allPads.contains(self) ||
+            Device.Model.allSimulatorPads.contains(self) ||
+            UIDevice.current.userInterfaceIdiom == .pad)
+    }
+
+    /// Returns whether the device is any of the simulator
+    /// Useful when there is a need to check and skip running a portion of code (location request or others)
+    public var isSimulator: Bool {
+        return Device.Model.allSimulators.contains(self)
+    }
+
+    public var isZoomed: Bool {
+        if Int(UIScreen.main.scale.rounded()) == 3 {
+            // Plus-sized
+            return UIScreen.main.nativeScale > 2.7
+        } else {
+            return UIScreen.main.nativeScale > UIScreen.main.scale
+        }
+    }
+
+}
+#endif
+
 
