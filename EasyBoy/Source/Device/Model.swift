@@ -126,9 +126,6 @@ extension Device.Model: CustomStringConvertible {
         return "Mac"
         #elseif os(tvOS)
         switch self {
-        case .AppleTV1Gen: return "Apple TV 1"
-        case .AppleTV2Gen: return "Apple TV 2"
-        case .AppleTV3Gen: return "Apple TV 3"
         case .AppleTV4Gen: return "Apple TV 4"
         case .AppleTV4K: return "Apple TV 4K"
         case .simulator(let model): return "Simulator (\(model))"
@@ -202,9 +199,6 @@ extension Device {
         return .mac
         #elseif os(tvOS)
         switch code {
-        case "AppleTV1,1":               return .AppleTV1Gen
-        case "AppleTV2,1":               return .AppleTV2Gen
-        case "AppleTV3,1", "AppleTV3,2": return .AppleTV3Gen
         case "AppleTV5,3":               return .AppleTV4Gen
         case "AppleTV6,2":               return .AppleTV4K
         /*** Simulator ***/
