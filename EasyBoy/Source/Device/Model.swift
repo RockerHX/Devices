@@ -72,6 +72,72 @@ extension Device {
 }
 
 
+// MARK: - CustomStringConvertible -
+extension Device.Model: CustomStringConvertible {
+
+    public var description: String {
+        #if os(iOS)
+        switch self {
+        case .iPodTouch5Gen:        return "iPod Touch 5"
+        case .iPodTouch6Gen:        return "iPod Touch 6"
+        case .iPhone4:              return "iPhone 4"
+        case .iPhone4S:             return "iPhone 4s"
+        case .iPhone5:              return "iPhone 5"
+        case .iPhone5C:             return "iPhone 5c"
+        case .iPhone5S:             return "iPhone 5s"
+        case .iPhone6:              return "iPhone 6"
+        case .iPhone6Plus:          return "iPhone 6 Plus"
+        case .iPhone6S:             return "iPhone 6s"
+        case .iPhone6SPlus:         return "iPhone 6s Plus"
+        case .iPhone7:              return "iPhone 7"
+        case .iPhone7Plus:          return "iPhone 7 Plus"
+        case .iPhoneSE:             return "iPhone SE"
+        case .iPhone8:              return "iPhone 8"
+        case .iPhone8Plus:          return "iPhone 8 Plus"
+        case .iPhoneX:              return "iPhone X"
+        case .iPad3:                return "iPad 3"
+        case .iPad4:                return "iPad 4"
+        case .iPadAir:              return "iPad Air"
+        case .iPadAir2:             return "iPad Air 2"
+        case .iPad5:                return "iPad 5"
+        case .iPadMini:             return "iPad Mini"
+        case .iPadMini2:            return "iPad Mini 2"
+        case .iPadMini3:            return "iPad Mini 3"
+        case .iPadMini4:            return "iPad Mini 4"
+        case .iPadPro9_7Inch:       return "iPad Pro (9.7-inch)"
+        case .iPadPro12_9Inch:      return "iPad Pro (12.9-inch)"
+        case .iPadPro12_9Inch2:     return "iPad Pro (12.9-inch) 2"
+        case .iPadPro10_5Inch:      return "iPad Pro (10.5-inch)"
+        case .HomePod:              return "HomePod"
+        case .simulator(let model): return "Simulator (\(model))"
+        case .unknown:              return "unknown"
+        }
+        #elseif os(OSX)
+        return "Mac"
+        #elseif os(tvOS)
+        switch self {
+        case .AppleTV1Gen: return "Apple TV 1"
+        case .AppleTV2Gen: return "Apple TV 2"
+        case .AppleTV3Gen: return "Apple TV 3"
+        case .AppleTV4Gen: return "Apple TV 4"
+        case .AppleTV4K: return "Apple TV 4K"
+        case .simulator(let model): return "Simulator (\(model))"
+        case .unknown: return "unknown"
+        }
+        #elseif os(watchOS)
+        switch self {
+        case .AppleWatch: return "Apple Watch (1st generation)"
+        case .AppleWatchSeries1: return "Apple Watch Series 1"
+        case .AppleWatchSeries2: return "Apple Watch Series 2"
+        case .AppleWatchSeries3: return "Apple Watch Series 3"
+        case .simulator(let model): return "Simulator (\(model))"
+        case .unknown: return "unknown"
+        }
+        #endif
+    }
+}
+
+
 // MARK: - Model Methods -
 extension Device {
 
