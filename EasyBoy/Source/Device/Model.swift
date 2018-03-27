@@ -44,8 +44,9 @@ extension Device {
         case iPadMini3
         case iPadMini4
         case iPadPro9_7Inch
-        case iPadPro10_5Inch
         case iPadPro12_9Inch
+        case iPadPro12_9Inch2
+        case iPadPro10_5Inch
         #elseif os(OSX)
         case mac
         #elseif os(tvOS)
@@ -108,9 +109,10 @@ extension Device {
         case "iPad4,4", "iPad4,5", "iPad4,6":            return .iPadMini2
         case "iPad4,7", "iPad4,8", "iPad4,9":            return .iPadMini3
         case "iPad5,1", "iPad5,2":                       return .iPadMini4
-        case "iPad6,7", "iPad6,8", "iPad7,1", "iPad7,2": return .iPadPro12_9Inch
-        case "iPad7,3", "iPad7,4":                       return .iPadPro10_5Inch
         case "iPad6,3", "iPad6,4":                       return .iPadPro9_7Inch
+        case "iPad6,7", "iPad6,8":                       return .iPadPro12_9Inch
+        case "iPad7,1", "iPad7,2":                       return .iPadPro12_9Inch2
+        case "iPad7,3", "iPad7,4":                       return .iPadPro10_5Inch
         /*** Simulator ***/
         case "i386", "x86_64":                           return .simulator(getModel(byCode: simulatorCode() ?? "iOS"))
         /*** Unknown ***/
