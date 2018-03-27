@@ -47,6 +47,8 @@ extension Device {
         case iPadPro12_9Inch
         case iPadPro12_9Inch2
         case iPadPro10_5Inch
+        /*** HomePod ***/
+        case HomePod
         #elseif os(OSX)
         case mac
         #elseif os(tvOS)
@@ -113,6 +115,8 @@ extension Device {
         case "iPad6,7", "iPad6,8":                       return .iPadPro12_9Inch
         case "iPad7,1", "iPad7,2":                       return .iPadPro12_9Inch2
         case "iPad7,3", "iPad7,4":                       return .iPadPro10_5Inch
+        /*** HomePod ***/
+        case "AudioAccessory1,1":                        return .HomePod
         /*** Simulator ***/
         case "i386", "x86_64":                           return .simulator(getModel(byCode: simulatorCode() ?? "iOS"))
         /*** Unknown ***/
