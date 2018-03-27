@@ -72,6 +72,16 @@ extension Device {
 }
 
 
+// MARK: - Equatable -
+extension Device.Model: Equatable {
+
+    public static func == (lhs: Device.Model, rhs: Device.Model) -> Bool {
+        return lhs.description == rhs.description
+    }
+    
+}
+
+
 // MARK: - CustomStringConvertible -
 extension Device.Model: CustomStringConvertible {
 
