@@ -50,7 +50,7 @@ extension Device {
         /*** HomePod ***/
         case HomePod
         #elseif os(OSX)
-        case mac
+        case Mac
         #elseif os(tvOS)
         case AppleTV1Gen
         case AppleTV2Gen
