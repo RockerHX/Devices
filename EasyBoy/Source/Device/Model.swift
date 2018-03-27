@@ -72,10 +72,11 @@ extension Device {
 // MARK: - Model Methods -
 extension Device {
 
+    static fileprivate func simulatorCode() -> String? {
+        return ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"]
+    }
+
     static fileprivate func getModel(byCode code: String) -> Model {
-        if code == "i386" || code == "x86_64" {
-            return .simulator(getModel(byCode: ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"] ?? ""))
-        }
         #if os(iOS)
         switch code {
         /*** iPod touch ***/
@@ -110,6 +111,8 @@ extension Device {
         case "iPad6,7", "iPad6,8", "iPad7,1", "iPad7,2": return .iPadPro12_9Inch
         case "iPad7,3", "iPad7,4":                       return .iPadPro10_5Inch
         case "iPad6,3", "iPad6,4":                       return .iPadPro9_7Inch
+        /*** Simulator ***/
+        case "i386", "x86_64":                           return .simulator(getModel(byCode: simulatorCode() ?? "iOS"))
         /*** Unknown ***/
         default:                                         return .unknown
         }
@@ -122,6 +125,8 @@ extension Device {
         case "AppleTV3,1", "AppleTV3,2": return .AppleTV3Gen
         case "AppleTV5,3":               return .AppleTV4Gen
         case "AppleTV6,2":               return .AppleTV4K
+        /*** Simulator ***/
+        case "i386", "x86_64":           return .simulator(getModel(byCode: simulatorCode() ?? "tvOS"))
         default:                         return .unknown
         }
         #elseif os(watchOS)
@@ -130,6 +135,8 @@ extension Device {
         case "Watch2,6", "Watch2,7":                         return .AppleWatchSeries1
         case "Watch2,3", "Watch2,4":                         return .AppleWatchSeries2
         case "Watch3,1", "Watch3,2", "Watch3,3", "Watch3,4": return .AppleWatchSeries3
+        /*** Simulator ***/
+        case "i386", "x86_64":                               return .simulator(getModel(byCode: simulatorCode() ?? "watchOS"))
         default:                                             return .unknown
         }
         #endif
