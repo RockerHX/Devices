@@ -9,19 +9,13 @@
 
 extension Device {
 
-    public enum Family: String {
-
-        case unknown
+    public enum Family {
 
         #if os(iOS)
-
-        case simulator
         case iPodtouch
         case iPhone
         case iPad
-
         #elseif os(OSX)
-
         case MacMini
         case MacBookAir
         case MacBook
@@ -30,17 +24,13 @@ extension Device {
         case iMacPro
         case MacPro
         case XServe
-
         #elseif os(tvOS)
-
         case AppleTV
-
         #elseif os(watchOS)
-
         case AppleWatch
-
         #endif
-
+        case simulator
+        case unknown
     }
 
 }
@@ -57,10 +47,6 @@ extension Device {
             return .iPad
         } else if code.contains("iPod") {
             return .iPodtouch
-        } else if code == "i386" || code == "x86_64" {
-            return .simulator
-        } else {
-            return .unknown
         }
         #elseif os(OSX)
         if code.hasPrefix("MacMini") {
@@ -79,14 +65,17 @@ extension Device {
             return .MacPro
         } else if code.hasPrefix("Xserve") {
             return .Xserve
-        } else {
-            return .unknown
         }
         #elseif os(tvOS)
         return .AppleTV
         #elseif os(watchOS)
         return .AppleWatch
         #endif
+        if code == "i386" || code == "x86_64" {
+            return .simulator
+        } else {
+            return .unknown
+        }
     }
 
     static public func family() -> Family {
