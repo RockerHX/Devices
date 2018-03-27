@@ -266,3 +266,92 @@ extension Device.Model {
 #endif
 
 
+extension Device.Model {
+
+    #if os(iOS)
+
+    /// All iPod
+    public static var allPods: [Device.Model] {
+        return [.iPodTouch5Gen, .iPodTouch6Gen]
+    }
+
+    /// All iPhones
+    public static var allPhones: [Device.Model] {
+        return [.iPhone4, .iPhone4S, .iPhone5, .iPhone5C, .iPhone5S, .iPhone6, .iPhone6Plus, .iPhone6S, .iPhone6SPlus, .iPhone7, .iPhone7Plus, .iPhoneSE, .iPhone8, .iPhone8Plus, .iPhoneX]
+    }
+
+    /// All iPads
+    public static var allPads: [Device.Model] {
+        return [.iPad3, .iPad4, .iPadAir, .iPadAir2, .iPad5, .iPadMini, .iPadMini2, .iPadMini3, .iPadMini4, .iPadPro9_7Inch, .iPadPro12_9Inch, .iPadPro12_9Inch2, .iPadPro10_5Inch]
+    }
+
+    /// All Plus-Sized Devices
+    public static var allPlusSizedDevices: [Device.Model] {
+        return [.iPhone6Plus, .iPhone6SPlus, .iPhone7Plus, .iPhone8Plus]
+    }
+
+    /// All Plus-Sized Devices
+    public static var allProDevices: [Device.Model] {
+        return [.iPadPro9_7Inch, .iPadPro12_9Inch, .iPadPro12_9Inch2, .iPadPro10_5Inch]
+    }
+
+    /// All simulator iPods
+    public static var allSimulatorPods: [Device.Model] {
+        return allPods.map{ .simulator($0) }
+    }
+
+    /// All simulator iPhones
+    public static var allSimulatorPhones: [Device.Model] {
+        return allPhones.map{ .simulator($0) }
+    }
+
+    /// All simulator iPads
+    public static var allSimulatorPads: [Device.Model] {
+        return allPads.map{ .simulator($0) }
+    }
+
+    #elseif os(tvOS)
+
+    /// All TVs
+    public static var allTVs: [Device.Model] {
+        return [.AppleTV4Gen, .appleTV4K]
+    }
+
+    /// All simulator TVs
+    public static var allSimulatorTVs: [Device.Model] {
+        return allTVs.map{ .simulator($0) }
+    }
+
+    #elseif os(watchOS)
+
+    /// All Watchs
+    public static var allWatchs: [Device.Model] {
+        return [.AppleWatch, .AppleWatchSeries1, .AppleWatchSeries2, .AppleWatchSeries2]
+    }
+
+    /// All simulator Watchs
+    public static var allSimulatorWatchs: [Device.Model] {
+    return allWatchs.map{ .simulator($0) }
+    }
+
+    #endif
+
+
+    /// All real devices (i.e. all devices except for all simulators)
+    public static var allModels: [Device.Model] {
+        #if os(iOS)
+        return allPods + allPhones + allPads
+        #elseif os(tvOS)
+        return allTVs
+        #elseif os(watchOS)
+        return allWatchs
+        #endif
+    }
+
+    /// All simulators
+    public static var allSimulators: [Device.Model] {
+        return allModels.map{ .simulator($0) }
+    }
+
+}
+
