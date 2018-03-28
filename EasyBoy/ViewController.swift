@@ -15,18 +15,23 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print(UIDevice.current.model)
-        print(UIDevice.current.localizedModel)
-        print(UIDevice.current.name)
-        print(UIDevice.current.systemName)
-        print(UIDevice.current.systemVersion)
-        print(UIDevice.current.userInterfaceIdiom)
-        print(UIDevice.current.batteryLevel)
-        print(UIDevice.current.batteryState)
-        print(UIDevice.current.identifierForVendor)
-        print(UIDevice.current.debugDescription)
-        print(UIDevice.current.description)
-//        Device.version()
+        print("device: \(Device.family())")
+        switch Device.model() {
+        case .simulator(let model):
+            switch model {
+            case .iPhone8:
+                print("device: \(Device.model())")
+            default:
+                break;
+            }
+        default:
+            break
+        }
+
+        if Device.model() == .simulator(.iPhone8) {
+            print("iPhone8")
+        }
+        
     }
 
 }
