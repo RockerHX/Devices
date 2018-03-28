@@ -76,7 +76,7 @@ extension Device {
 extension Device.Model: Equatable {
 
     public static func == (lhs: Device.Model, rhs: Device.Model) -> Bool {
-        return lhs.description == rhs.description
+        return lhs.identifier == rhs.identifier
     }
     
 }
@@ -86,6 +86,10 @@ extension Device.Model: Equatable {
 extension Device.Model: CustomStringConvertible {
 
     public var description: String {
+        return identifier
+    }
+
+    public var identifier: String {
         #if os(iOS)
         switch self {
         case .iPodTouch5Gen:        return "iPod Touch 5"
