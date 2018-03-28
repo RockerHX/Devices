@@ -8,6 +8,7 @@
 
 
 import UIKit
+import Devices
 
 
 class ViewController: UIViewController {
