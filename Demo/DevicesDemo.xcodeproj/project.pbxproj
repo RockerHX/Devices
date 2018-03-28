@@ -15,7 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C663D5972064B071008F2276 /* DeviceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeviceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C663D5972064B071008F2276 /* DevicesDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevicesDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C663D59A2064B071008F2276 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C663D59C2064B071008F2276 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C663D59F2064B071008F2276 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		C663D58E2064B071008F2276 = {
 			isa = PBXGroup;
 			children = (
-				C663D5992064B071008F2276 /* DeviceDemo */,
+				C663D5992064B071008F2276 /* DevicesDemo */,
 				C663D5982064B071008F2276 /* Products */,
 				AFFAC91BA2447FECD00B39DA /* Pods */,
 				6F157A62E81B0EA932B2EA96 /* Frameworks */,
@@ -62,12 +62,12 @@
 		C663D5982064B071008F2276 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C663D5972064B071008F2276 /* DeviceDemo.app */,
+				C663D5972064B071008F2276 /* DevicesDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C663D5992064B071008F2276 /* DeviceDemo */ = {
+		C663D5992064B071008F2276 /* DevicesDemo */ = {
 			isa = PBXGroup;
 			children = (
 				C663D59A2064B071008F2276 /* AppDelegate.swift */,
@@ -77,15 +77,15 @@
 				C663D5A32064B071008F2276 /* LaunchScreen.storyboard */,
 				C663D5A62064B071008F2276 /* Info.plist */,
 			);
-			path = DeviceDemo;
+			path = DevicesDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C663D5962064B071008F2276 /* DeviceDemo */ = {
+		C663D5962064B071008F2276 /* DevicesDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C663D5BF2064B072008F2276 /* Build configuration list for PBXNativeTarget "DeviceDemo" */;
+			buildConfigurationList = C663D5BF2064B072008F2276 /* Build configuration list for PBXNativeTarget "DevicesDemo" */;
 			buildPhases = (
 				BBC49EAB71DD275DA31F017F /* [CP] Check Pods Manifest.lock */,
 				C663D5932064B071008F2276 /* Sources */,
@@ -98,9 +98,9 @@
 			);
 			dependencies = (
 			);
-			name = DeviceDemo;
+			name = DevicesDemo;
 			productName = EasyBoy;
-			productReference = C663D5972064B071008F2276 /* DeviceDemo.app */;
+			productReference = C663D5972064B071008F2276 /* DevicesDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -119,7 +119,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C663D5922064B071008F2276 /* Build configuration list for PBXProject "DeviceDemo" */;
+			buildConfigurationList = C663D5922064B071008F2276 /* Build configuration list for PBXProject "DevicesDemo" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -132,7 +132,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C663D5962064B071008F2276 /* DeviceDemo */,
+				C663D5962064B071008F2276 /* DevicesDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -348,9 +348,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DeviceDemo/Info.plist;
+				INFOPLIST_FILE = DevicesDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cc.caver.Device;
+				PRODUCT_BUNDLE_IDENTIFIER = cc.caver.Devices;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -362,9 +362,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DeviceDemo/Info.plist;
+				INFOPLIST_FILE = DevicesDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cc.caver.Device;
+				PRODUCT_BUNDLE_IDENTIFIER = cc.caver.Devices;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -374,7 +374,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C663D5922064B071008F2276 /* Build configuration list for PBXProject "DeviceDemo" */ = {
+		C663D5922064B071008F2276 /* Build configuration list for PBXProject "DevicesDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C663D5BD2064B072008F2276 /* Debug */,
@@ -383,7 +383,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C663D5BF2064B072008F2276 /* Build configuration list for PBXNativeTarget "DeviceDemo" */ = {
+		C663D5BF2064B072008F2276 /* Build configuration list for PBXNativeTarget "DevicesDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C663D5C02064B072008F2276 /* Debug */,
