@@ -8,6 +8,7 @@
 
 
 import UIKit
+import EasyBoy
 
 
 class ViewController: UIViewController {

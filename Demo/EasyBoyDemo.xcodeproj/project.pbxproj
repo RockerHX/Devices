@@ -44,17 +44,17 @@
 		B44CD2FE62F0BB96B62C38BB /* Pods-EasyBoy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyBoy.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyBoy/Pods-EasyBoy.release.xcconfig"; sourceTree = "<group>"; };
 		B6DC48DE798EFEC140F91F1D /* Pods-EasyBoyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyBoyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EasyBoyTests/Pods-EasyBoyTests.release.xcconfig"; sourceTree = "<group>"; };
 		C0A93FB25B86C0BBBD201420 /* Pods_EasyBoyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EasyBoyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C663D5972064B071008F2276 /* EasyBoy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyBoy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C663D5972064B071008F2276 /* EasyBoyDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyBoyDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C663D59A2064B071008F2276 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C663D59C2064B071008F2276 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C663D59F2064B071008F2276 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C663D5A12064B071008F2276 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C663D5A42064B071008F2276 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C663D5A62064B071008F2276 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C663D5AB2064B072008F2276 /* EasyBoyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyBoyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C663D5AB2064B072008F2276 /* EasyBoyDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyBoyDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C663D5AF2064B072008F2276 /* EasyBoyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyBoyTests.swift; sourceTree = "<group>"; };
 		C663D5B12064B072008F2276 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C663D5B62064B072008F2276 /* EasyBoyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyBoyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C663D5B62064B072008F2276 /* EasyBoyDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EasyBoyDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C663D5BA2064B072008F2276 /* EasyBoyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyBoyUITests.swift; sourceTree = "<group>"; };
 		C663D5BC2064B072008F2276 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CCBD769D8D956A38EFE73915 /* Pods-EasyBoyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasyBoyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EasyBoyTests/Pods-EasyBoyTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 		C663D58E2064B071008F2276 = {
 			isa = PBXGroup;
 			children = (
-				C663D5992064B071008F2276 /* EasyBoy */,
+				C663D5992064B071008F2276 /* EasyBoyDemo */,
 				C663D5AE2064B072008F2276 /* EasyBoyTests */,
 				C663D5B92064B072008F2276 /* EasyBoyUITests */,
 				C663D5982064B071008F2276 /* Products */,
@@ -127,14 +127,14 @@
 		C663D5982064B071008F2276 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C663D5972064B071008F2276 /* EasyBoy.app */,
-				C663D5AB2064B072008F2276 /* EasyBoyTests.xctest */,
-				C663D5B62064B072008F2276 /* EasyBoyUITests.xctest */,
+				C663D5972064B071008F2276 /* EasyBoyDemo.app */,
+				C663D5AB2064B072008F2276 /* EasyBoyDemoTests.xctest */,
+				C663D5B62064B072008F2276 /* EasyBoyDemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C663D5992064B071008F2276 /* EasyBoy */ = {
+		C663D5992064B071008F2276 /* EasyBoyDemo */ = {
 			isa = PBXGroup;
 			children = (
 				C663D59A2064B071008F2276 /* AppDelegate.swift */,
@@ -144,7 +144,7 @@
 				C663D5A32064B071008F2276 /* LaunchScreen.storyboard */,
 				C663D5A62064B071008F2276 /* Info.plist */,
 			);
-			path = EasyBoy;
+			path = EasyBoyDemo;
 			sourceTree = "<group>";
 		};
 		C663D5AE2064B072008F2276 /* EasyBoyTests */ = {
@@ -168,9 +168,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C663D5962064B071008F2276 /* EasyBoy */ = {
+		C663D5962064B071008F2276 /* EasyBoyDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C663D5BF2064B072008F2276 /* Build configuration list for PBXNativeTarget "EasyBoy" */;
+			buildConfigurationList = C663D5BF2064B072008F2276 /* Build configuration list for PBXNativeTarget "EasyBoyDemo" */;
 			buildPhases = (
 				BBC49EAB71DD275DA31F017F /* [CP] Check Pods Manifest.lock */,
 				C663D5932064B071008F2276 /* Sources */,
@@ -183,14 +183,14 @@
 			);
 			dependencies = (
 			);
-			name = EasyBoy;
+			name = EasyBoyDemo;
 			productName = EasyBoy;
-			productReference = C663D5972064B071008F2276 /* EasyBoy.app */;
+			productReference = C663D5972064B071008F2276 /* EasyBoyDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		C663D5AA2064B072008F2276 /* EasyBoyTests */ = {
+		C663D5AA2064B072008F2276 /* EasyBoyDemoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C663D5C22064B072008F2276 /* Build configuration list for PBXNativeTarget "EasyBoyTests" */;
+			buildConfigurationList = C663D5C22064B072008F2276 /* Build configuration list for PBXNativeTarget "EasyBoyDemoTests" */;
 			buildPhases = (
 				A819656D6C5CE362D53F32CE /* [CP] Check Pods Manifest.lock */,
 				C663D5A72064B072008F2276 /* Sources */,
@@ -204,14 +204,14 @@
 			dependencies = (
 				C663D5AD2064B072008F2276 /* PBXTargetDependency */,
 			);
-			name = EasyBoyTests;
+			name = EasyBoyDemoTests;
 			productName = EasyBoyTests;
-			productReference = C663D5AB2064B072008F2276 /* EasyBoyTests.xctest */;
+			productReference = C663D5AB2064B072008F2276 /* EasyBoyDemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		C663D5B52064B072008F2276 /* EasyBoyUITests */ = {
+		C663D5B52064B072008F2276 /* EasyBoyDemoUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C663D5C52064B072008F2276 /* Build configuration list for PBXNativeTarget "EasyBoyUITests" */;
+			buildConfigurationList = C663D5C52064B072008F2276 /* Build configuration list for PBXNativeTarget "EasyBoyDemoUITests" */;
 			buildPhases = (
 				E4DF19D3269C084251648E02 /* [CP] Check Pods Manifest.lock */,
 				C663D5B22064B072008F2276 /* Sources */,
@@ -225,9 +225,9 @@
 			dependencies = (
 				C663D5B82064B072008F2276 /* PBXTargetDependency */,
 			);
-			name = EasyBoyUITests;
+			name = EasyBoyDemoUITests;
 			productName = EasyBoyUITests;
-			productReference = C663D5B62064B072008F2276 /* EasyBoyUITests.xctest */;
+			productReference = C663D5B62064B072008F2276 /* EasyBoyDemoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -256,7 +256,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C663D5922064B071008F2276 /* Build configuration list for PBXProject "EasyBoy" */;
+			buildConfigurationList = C663D5922064B071008F2276 /* Build configuration list for PBXProject "EasyBoyDemo" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -269,9 +269,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C663D5962064B071008F2276 /* EasyBoy */,
-				C663D5AA2064B072008F2276 /* EasyBoyTests */,
-				C663D5B52064B072008F2276 /* EasyBoyUITests */,
+				C663D5962064B071008F2276 /* EasyBoyDemo */,
+				C663D5AA2064B072008F2276 /* EasyBoyDemoTests */,
+				C663D5B52064B072008F2276 /* EasyBoyDemoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -484,12 +484,12 @@
 /* Begin PBXTargetDependency section */
 		C663D5AD2064B072008F2276 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C663D5962064B071008F2276 /* EasyBoy */;
+			target = C663D5962064B071008F2276 /* EasyBoyDemo */;
 			targetProxy = C663D5AC2064B072008F2276 /* PBXContainerItemProxy */;
 		};
 		C663D5B82064B072008F2276 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C663D5962064B071008F2276 /* EasyBoy */;
+			target = C663D5962064B071008F2276 /* EasyBoyDemo */;
 			targetProxy = C663D5B72064B072008F2276 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -627,7 +627,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = EasyBoy/Info.plist;
+				INFOPLIST_FILE = EasyBoyDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.caver.EasyBoy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -642,7 +642,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = EasyBoy/Info.plist;
+				INFOPLIST_FILE = EasyBoyDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.caver.EasyBoy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -664,7 +664,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyBoy.app/EasyBoy";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyBoyDemo.app/EasyBoyDemo";
 			};
 			name = Debug;
 		};
@@ -681,7 +681,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyBoy.app/EasyBoy";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EasyBoyDemo.app/EasyBoyDemo";
 			};
 			name = Release;
 		};
@@ -720,7 +720,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C663D5922064B071008F2276 /* Build configuration list for PBXProject "EasyBoy" */ = {
+		C663D5922064B071008F2276 /* Build configuration list for PBXProject "EasyBoyDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C663D5BD2064B072008F2276 /* Debug */,
@@ -729,7 +729,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C663D5BF2064B072008F2276 /* Build configuration list for PBXNativeTarget "EasyBoy" */ = {
+		C663D5BF2064B072008F2276 /* Build configuration list for PBXNativeTarget "EasyBoyDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C663D5C02064B072008F2276 /* Debug */,
@@ -738,7 +738,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C663D5C22064B072008F2276 /* Build configuration list for PBXNativeTarget "EasyBoyTests" */ = {
+		C663D5C22064B072008F2276 /* Build configuration list for PBXNativeTarget "EasyBoyDemoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C663D5C32064B072008F2276 /* Debug */,
@@ -747,7 +747,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C663D5C52064B072008F2276 /* Build configuration list for PBXNativeTarget "EasyBoyUITests" */ = {
+		C663D5C52064B072008F2276 /* Build configuration list for PBXNativeTarget "EasyBoyDemoUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C663D5C62064B072008F2276 /* Debug */,
