@@ -68,6 +68,44 @@ extension Device {
 }
 
 
+// MARK: - CustomStringConvertible -
+extension Device.Size: CustomStringConvertible {
+
+    public var description: String {
+        return identifier
+    }
+
+    public var identifier: String {
+        switch self {
+        case .screen3_5Inch:    return "3.5 inch"
+        case .screen4Inch:      return "4 inch"
+        case .screen4_7Inch:    return "4.7 inch"
+        case .screen5_5Inch:    return "5.5 inch"
+        case .screen5_8Inch:    return "5.8 inch"
+        case .screen7_9Inch:    return "7.9 inch"
+        case .screen9_7Inch:    return "9.7 inch"
+        case .screen10_5Inch:   return "10.5 inch"
+        case .screen12_9Inch:   return "12.9 inch"
+        case .unknown:          return "unknown"
+        }
+        #if os(iOS)
+        #elseif os(OSX)
+        switch self {
+        case .screen11Inch:     return "11 inch"
+        case .screen12Inch:     return "12 inch"
+        case .screen13Inch:     return "13 inch"
+        case .screen15Inch:     return "15 inch"
+        case .screen17Inch:     return "17 inch"
+        case .screen20Inch:     return "20 inch"
+        case .screen21_5Inch:   return "21.5 inch"
+        case .screen24Inch:     return "24 inch"
+        case .screen27Inch:     return "27 inch"
+        }
+        #endif
+    }
+}
+
+
 #if os(iOS)
 
 
