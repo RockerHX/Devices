@@ -23,7 +23,9 @@ class ViewController: UIViewController {
         #if os(iOS)
         iOSDeviceFamily()
         iOSDeviceModel()
+        iOSModelHelper()
         iOSDeviceSize()
+        iOSSizeHelper()
         #elseif os(OSX)
 
         #elseif os(tvOS)
@@ -128,6 +130,18 @@ class ViewController: UIViewController {
         }
     }
 
+    func iOSModelHelper() {
+        let model = Device.model()
+        let allPhones = Device.Model.allPhones
+        if allPhones.contains(model) {
+            print("Current device belong to iPhone ")
+        }
+        let allSimulatorPhones = Device.Model.allSimulatorPhones
+        if allSimulatorPhones.contains(model) {
+            print("Current device belong to iPhone Simulator")
+        }
+    }
+
     func iOSDeviceSize() {
         let size = Device.size()
         switch size {
@@ -151,6 +165,38 @@ class ViewController: UIViewController {
             print("Device size: \(size.description)")
         case .unknown:
             print("Device size unknown.")
+        }
+    }
+
+    func iOSSizeHelper() {
+        let size = Device.size()
+
+        if size > .screen4_7Inch {
+            print("Your device screen is larger than 4.7 inch")
+        }
+
+        if size < .screen4_7Inch {
+            print("Your device screen is smaller than 4.7 inch")
+        }
+
+        if size >= .screen4_7Inch {
+            print("Your device screen is equal or larger than 4.7 inch")
+        }
+
+        if size <= .screen4_7Inch {
+            print("Your device screen is equal or smaller than 4.7 inch")
+        }
+        
+        if size == .screen4_7Inch {
+            print("It's a 4.7 inch screen")
+        }
+
+        if size != .screen4_7Inch {
+            print("It's not 4.7 inch screen")
+        }
+
+        if Device.isRetina() {
+            print("It's a retina display")
         }
     }
 

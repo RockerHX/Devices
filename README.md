@@ -93,8 +93,41 @@ Demo code:
 
 ### Model
 
-### Size
+Simple code:
+```swift
+func iOSModelHelper() {
+    let model = Device.model()
+    let allPhones = Device.Model.allPhones
+    if allPhones.contains(model) {
+        print("Current device belong to iPhone ")
+    }
+    let allSimulatorPhones = Device.Model.allSimulatorPhones
+    if allSimulatorPhones.contains(model) {
+        print("Current device belong to iPhone Simulator")
+    }
+}
+```
+Demo code:
+[Model Helper Demo Code](/Document/iOS/ModelHelper.md)
 
+### Size
+You can use operator like `>`, `<`, `>=`, `<=`, `==`, `!=`
+
+Simple code:
+```swift
+func iOSSizeHelper() {
+    let size = Device.size()
+    if size > .screen4_7Inch {
+        print("Your device screen is larger than 4.7 inch")
+    }
+
+    if Device.isRetina() {
+        print("It's a retina display")
+    }
+}
+```
+Demo code:
+[Size Helper Demo Code](/Document/iOS/SizeHelper.md)
 
 # License
 
