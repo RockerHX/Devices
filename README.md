@@ -1,1 +1,1 @@
-# EasyBoy
+# Device
