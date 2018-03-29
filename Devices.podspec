@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Devices"
-  s.version      = "0.1.1"
+  s.version      = "0.2.0"
   s.summary      = "Devices lib take device information which you need."
 
   # This description is used to generate tags and improve search results.
@@ -63,14 +63,15 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  s.platform      = :ios, "9.0"
-  s.swift_version = "4.0"
+  # s.platform = :ios, "9.0"
 
   #  When using multiple platforms
-  # s.ios.deployment_target = "5.0"
-  # s.osx.deployment_target = "10.7"
+  s.ios.deployment_target = "9.0"
+  s.osx.deployment_target = "10.11"
   # s.watchos.deployment_target = "2.0"
   # s.tvos.deployment_target = "9.0"
+  
+  s.swift_version = "4.0"
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -116,7 +117,8 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  s.frameworks = "UIKit"
+  s.ios.framework = "UIKit"
+  s.osx.framework = "Cocoa"
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
