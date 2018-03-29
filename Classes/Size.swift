@@ -102,6 +102,8 @@ extension Device.Size: CustomStringConvertible {
         case .screen27Inch:     return "27 inch"
         case .unknown:          return "unknown"
         }
+        #elseif os(tvOS)
+        return  "unknown"
         #endif
     }
 }

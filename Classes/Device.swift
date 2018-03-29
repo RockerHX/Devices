@@ -11,10 +11,10 @@
 // OSX Devices Wiki: https://en.wikipedia.org/wiki/Macintosh#Product_line
 
 
-#if os(iOS)
-import UIKit
-#elseif os(OSX)
+#if os(OSX)
 import Cocoa
+#else
+import UIKit
 #endif
 
 

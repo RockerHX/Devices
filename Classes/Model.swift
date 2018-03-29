@@ -7,11 +7,6 @@
 //
 
 
-#if os(iOS)
-import UIKit
-#endif
-
-
 extension Device {
 
     public enum Model {
@@ -93,9 +88,6 @@ extension Device {
         case MacPro2013Late
         case MacPro2017Early
         #elseif os(tvOS)
-        case AppleTV1Gen
-        case AppleTV2Gen
-        case AppleTV3Gen
         case AppleTV4Gen
         case AppleTV4K
         #elseif os(watchOS)
@@ -113,14 +105,25 @@ extension Device {
 }
 
 
-// MARK: - Model Methods -
+#if os(OSX)
+#else
+import UIKit
+
+
 extension Device {
 
-    #if os(iOS)
     static fileprivate func simulatorCode() -> String? {
         return ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"]
     }
-    #endif
+
+}
+
+
+#endif
+
+
+// MARK: - Model Methods -
+extension Device {
 
     static fileprivate func getModel(byCode code: String) -> Model {
         #if os(iOS)
@@ -353,7 +356,7 @@ extension Device.Model {
 
     /// All TVs
     public static var allTVs: [Device.Model] {
-        return [.AppleTV4Gen, .appleTV4K]
+        return [.AppleTV4Gen, .AppleTV4K]
     }
 
     /// All simulator TVs

@@ -67,7 +67,9 @@ extension Device {
             return .XServe
         }
         #elseif os(tvOS)
-        return .AppleTV
+        if code.hasPrefix("AppleTV") {
+            return .AppleTV
+        }
         #elseif os(watchOS)
         return .AppleWatch
         #endif
