@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Devices"
-  s.version      = "0.2.2"
+  s.version      = "0.3.0"
   s.summary      = "Devices lib take device information which you need."
 
   # This description is used to generate tags and improve search results.
@@ -68,8 +68,8 @@ Pod::Spec.new do |s|
   #  When using multiple platforms
   s.ios.deployment_target = "9.0"
   s.osx.deployment_target = "10.11"
+  s.tvos.deployment_target = "9.0"
   # s.watchos.deployment_target = "2.0"
-  # s.tvos.deployment_target = "9.0"
   
   s.swift_version = "4.0"
 
