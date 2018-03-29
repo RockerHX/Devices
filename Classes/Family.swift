@@ -53,14 +53,14 @@ extension Device {
             return .MacMini
         } else if code.hasPrefix("MacBookAir") {
             return .MacBookAir
-        } else if code.hasPrefix("MacBook") {
-            return .MacBook
         } else if code.hasPrefix("MacBookPro") {
             return .MacBookPro
-        } else if code.hasPrefix("iMac") {
-            return .iMac
+        } else if code.hasPrefix("MacBook") {
+            return .MacBook
         } else if code.hasPrefix("iMacPro") {
             return .iMacPro
+        } else if code.hasPrefix("iMac") {
+            return .iMac
         } else if code.hasPrefix("MacPro") {
             return .MacPro
         } else if code.hasPrefix("Xserve") {
