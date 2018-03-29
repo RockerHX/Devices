@@ -7,7 +7,8 @@
 //
 
 
-// Apple Device Wiki: https://www.theiphonewiki.com/wiki
+// iOS Devices Wiki: https://www.theiphonewiki.com/wiki
+// OSX Devices Wiki: https://en.wikipedia.org/wiki/Macintosh#Product_line
 
 
 #if os(iOS)
@@ -67,7 +68,7 @@ public struct Device {
 extension Device {
 
     static public func version() -> String {
-        return model().description + " " + size().description
+        return model().description + " - " + size().description
     }
 
 }
