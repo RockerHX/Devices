@@ -200,6 +200,10 @@ extension Device {
         }
     }
 
+    static public func isRetina() -> Bool {
+        return (NSScreen.main?.backingScaleFactor ?? 0) > 1.0
+    }
+
 }
 
 #endif
