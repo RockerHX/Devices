@@ -290,12 +290,38 @@ extension Device.Model {
 
     /// All iPhones
     public static var allPhones: [Device.Model] {
-        return [.iPhone4, .iPhone4S, .iPhone5, .iPhone5C, .iPhone5S, .iPhone6, .iPhone6Plus, .iPhone6S, .iPhone6SPlus, .iPhone7, .iPhone7Plus, .iPhoneSE, .iPhone8, .iPhone8Plus, .iPhoneX]
+        return [.iPhone4,
+                .iPhone4S,
+                .iPhone5,
+                .iPhone5C,
+                .iPhone5S,
+                .iPhone6,
+                .iPhone6Plus,
+                .iPhone6S,
+                .iPhone6SPlus,
+                .iPhone7,
+                .iPhone7Plus,
+                .iPhoneSE,
+                .iPhone8,
+                .iPhone8Plus,
+                .iPhoneX]
     }
 
     /// All iPads
     public static var allPads: [Device.Model] {
-        return [.iPad3, .iPad4, .iPadAir, .iPadAir2, .iPad5, .iPadMini, .iPadMini2, .iPadMini3, .iPadMini4, .iPadPro9_7Inch, .iPadPro12_9Inch, .iPadPro12_9Inch2, .iPadPro10_5Inch]
+        return [.iPad3,
+                .iPad4,
+                .iPadAir,
+                .iPadAir2,
+                .iPad5,
+                .iPadMini,
+                .iPadMini2,
+                .iPadMini3,
+                .iPadMini4,
+                .iPadPro9_7Inch,
+                .iPadPro12_9Inch,
+                .iPadPro12_9Inch2,
+                .iPadPro10_5Inch]
     }
 
     /// All Plus-Sized Devices
