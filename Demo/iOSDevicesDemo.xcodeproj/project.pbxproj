@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		23C6151A96586DF40064D328 /* Pods_DevicesDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9FEB3AC7840FD11E31049C5 /* Pods_DevicesDemo.framework */; };
+		4CB214C0988DD5EF6E407D56 /* Pods_iOSDevicesDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E93B92382770092C61293E1 /* Pods_iOSDevicesDemo.framework */; };
 		C663D59B2064B071008F2276 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C663D59A2064B071008F2276 /* AppDelegate.swift */; };
 		C663D59D2064B071008F2276 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C663D59C2064B071008F2276 /* ViewController.swift */; };
 		C663D5A02064B071008F2276 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C663D59E2064B071008F2276 /* Main.storyboard */; };
@@ -16,16 +16,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		663C6D71402675F191F0B171 /* Pods-DevicesDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevicesDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DevicesDemo/Pods-DevicesDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		C2C60341A62C87D5FC0FFE7D /* Pods-DevicesDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevicesDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-DevicesDemo/Pods-DevicesDemo.release.xcconfig"; sourceTree = "<group>"; };
-		C663D5972064B071008F2276 /* DevicesDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevicesDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E93B92382770092C61293E1 /* Pods_iOSDevicesDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSDevicesDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FD3432A928AF85A20B82050 /* Pods-iOSDevicesDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSDevicesDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSDevicesDemo/Pods-iOSDevicesDemo.release.xcconfig"; sourceTree = "<group>"; };
+		C663D5972064B071008F2276 /* iOSDevicesDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSDevicesDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C663D59A2064B071008F2276 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C663D59C2064B071008F2276 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C663D59F2064B071008F2276 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C663D5A12064B071008F2276 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C663D5A42064B071008F2276 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C663D5A62064B071008F2276 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F9FEB3AC7840FD11E31049C5 /* Pods_DevicesDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevicesDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4991CD5A161E661849BE144 /* Pods-iOSDevicesDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSDevicesDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSDevicesDemo/Pods-iOSDevicesDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,7 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23C6151A96586DF40064D328 /* Pods_DevicesDemo.framework in Frameworks */,
+				4CB214C0988DD5EF6E407D56 /* Pods_iOSDevicesDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,7 +43,7 @@
 		6F157A62E81B0EA932B2EA96 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F9FEB3AC7840FD11E31049C5 /* Pods_DevicesDemo.framework */,
+				4E93B92382770092C61293E1 /* Pods_iOSDevicesDemo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -51,8 +51,8 @@
 		AFFAC91BA2447FECD00B39DA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				663C6D71402675F191F0B171 /* Pods-DevicesDemo.debug.xcconfig */,
-				C2C60341A62C87D5FC0FFE7D /* Pods-DevicesDemo.release.xcconfig */,
+				D4991CD5A161E661849BE144 /* Pods-iOSDevicesDemo.debug.xcconfig */,
+				7FD3432A928AF85A20B82050 /* Pods-iOSDevicesDemo.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -60,7 +60,7 @@
 		C663D58E2064B071008F2276 = {
 			isa = PBXGroup;
 			children = (
-				C663D5992064B071008F2276 /* DevicesDemo */,
+				C663D5992064B071008F2276 /* iOSDevicesDemo */,
 				C663D5982064B071008F2276 /* Products */,
 				AFFAC91BA2447FECD00B39DA /* Pods */,
 				6F157A62E81B0EA932B2EA96 /* Frameworks */,
@@ -70,12 +70,12 @@
 		C663D5982064B071008F2276 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C663D5972064B071008F2276 /* DevicesDemo.app */,
+				C663D5972064B071008F2276 /* iOSDevicesDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C663D5992064B071008F2276 /* DevicesDemo */ = {
+		C663D5992064B071008F2276 /* iOSDevicesDemo */ = {
 			isa = PBXGroup;
 			children = (
 				C663D59A2064B071008F2276 /* AppDelegate.swift */,
@@ -85,15 +85,15 @@
 				C663D5A32064B071008F2276 /* LaunchScreen.storyboard */,
 				C663D5A62064B071008F2276 /* Info.plist */,
 			);
-			path = DevicesDemo;
+			path = iOSDevicesDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C663D5962064B071008F2276 /* DevicesDemo */ = {
+		C663D5962064B071008F2276 /* iOSDevicesDemo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C663D5BF2064B072008F2276 /* Build configuration list for PBXNativeTarget "DevicesDemo" */;
+			buildConfigurationList = C663D5BF2064B072008F2276 /* Build configuration list for PBXNativeTarget "iOSDevicesDemo" */;
 			buildPhases = (
 				BBC49EAB71DD275DA31F017F /* [CP] Check Pods Manifest.lock */,
 				C663D5932064B071008F2276 /* Sources */,
@@ -106,9 +106,9 @@
 			);
 			dependencies = (
 			);
-			name = DevicesDemo;
+			name = iOSDevicesDemo;
 			productName = EasyBoy;
-			productReference = C663D5972064B071008F2276 /* DevicesDemo.app */;
+			productReference = C663D5972064B071008F2276 /* iOSDevicesDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -127,7 +127,7 @@
 					};
 				};
 			};
-			buildConfigurationList = C663D5922064B071008F2276 /* Build configuration list for PBXProject "DevicesDemo" */;
+			buildConfigurationList = C663D5922064B071008F2276 /* Build configuration list for PBXProject "iOSDevicesDemo" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -140,7 +140,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C663D5962064B071008F2276 /* DevicesDemo */,
+				C663D5962064B071008F2276 /* iOSDevicesDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -165,7 +165,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-DevicesDemo/Pods-DevicesDemo-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-iOSDevicesDemo/Pods-iOSDevicesDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Devices/Devices.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -174,7 +174,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DevicesDemo/Pods-DevicesDemo-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSDevicesDemo/Pods-iOSDevicesDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BBC49EAB71DD275DA31F017F /* [CP] Check Pods Manifest.lock */ = {
@@ -188,7 +188,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DevicesDemo-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-iOSDevicesDemo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -207,7 +207,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DevicesDemo/Pods-DevicesDemo-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSDevicesDemo/Pods-iOSDevicesDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -353,11 +353,11 @@
 		};
 		C663D5C02064B072008F2276 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 663C6D71402675F191F0B171 /* Pods-DevicesDemo.debug.xcconfig */;
+			baseConfigurationReference = D4991CD5A161E661849BE144 /* Pods-iOSDevicesDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DevicesDemo/Info.plist;
+				INFOPLIST_FILE = iOSDevicesDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.caver.Devices;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -368,11 +368,11 @@
 		};
 		C663D5C12064B072008F2276 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2C60341A62C87D5FC0FFE7D /* Pods-DevicesDemo.release.xcconfig */;
+			baseConfigurationReference = 7FD3432A928AF85A20B82050 /* Pods-iOSDevicesDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DevicesDemo/Info.plist;
+				INFOPLIST_FILE = iOSDevicesDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cc.caver.Devices;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -384,7 +384,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C663D5922064B071008F2276 /* Build configuration list for PBXProject "DevicesDemo" */ = {
+		C663D5922064B071008F2276 /* Build configuration list for PBXProject "iOSDevicesDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C663D5BD2064B072008F2276 /* Debug */,
@@ -393,7 +393,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C663D5BF2064B072008F2276 /* Build configuration list for PBXNativeTarget "DevicesDemo" */ = {
+		C663D5BF2064B072008F2276 /* Build configuration list for PBXNativeTarget "iOSDevicesDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C663D5C02064B072008F2276 /* Debug */,
