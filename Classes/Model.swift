@@ -7,7 +7,9 @@
 //
 
 
+#if os(iOS)
 import UIKit
+#endif
 
 
 extension Device {
@@ -152,9 +154,11 @@ extension Device.Model: CustomStringConvertible {
 // MARK: - Model Methods -
 extension Device {
 
+    #if os(iOS)
     static fileprivate func simulatorCode() -> String? {
         return ProcessInfo().environment["SIMULATOR_MODEL_IDENTIFIER"]
     }
+    #endif
 
     static fileprivate func getModel(byCode code: String) -> Model {
         #if os(iOS)
@@ -200,7 +204,7 @@ extension Device {
         default:                                         return .unknown
         }
         #elseif os(OSX)
-        return .mac
+        return .Mac
         #elseif os(tvOS)
         switch code {
         case "AppleTV5,3":               return .AppleTV4Gen
@@ -345,6 +349,8 @@ extension Device.Model {
     public static var allModels: [Device.Model] {
         #if os(iOS)
         return allPods + allPhones + allPads
+        #elseif os(OSX)
+        return [.Mac]
         #elseif os(tvOS)
         return allTVs
         #elseif os(watchOS)

@@ -64,7 +64,7 @@ extension Device {
         } else if code.hasPrefix("MacPro") {
             return .MacPro
         } else if code.hasPrefix("Xserve") {
-            return .Xserve
+            return .XServe
         }
         #elseif os(tvOS)
         return .AppleTV
@@ -82,6 +82,11 @@ extension Device {
         return getFamily(byCode: code())
     }
 
+    static public func isSimulator() -> Bool {
+        return family() == .simulator
+    }
+
+    #if os(iOS)
     static public func isPad() -> Bool {
         return family() == .iPad
     }
@@ -93,10 +98,7 @@ extension Device {
     static public func isPod() -> Bool {
         return family() == .iPodtouch
     }
-
-    static public func isSimulator() -> Bool {
-        return family() == .simulator
-    }
+    #endif
 
 }
 

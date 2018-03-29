@@ -76,6 +76,7 @@ extension Device.Size: CustomStringConvertible {
     }
 
     public var identifier: String {
+        #if os(iOS)
         switch self {
         case .screen3_5Inch:    return "3.5 inch"
         case .screen4Inch:      return "4 inch"
@@ -88,7 +89,6 @@ extension Device.Size: CustomStringConvertible {
         case .screen12_9Inch:   return "12.9 inch"
         case .unknown:          return "unknown"
         }
-        #if os(iOS)
         #elseif os(OSX)
         switch self {
         case .screen11Inch:     return "11 inch"
@@ -100,6 +100,7 @@ extension Device.Size: CustomStringConvertible {
         case .screen21_5Inch:   return "21.5 inch"
         case .screen24Inch:     return "24 inch"
         case .screen27Inch:     return "27 inch"
+        case .unknown:          return "unknown"
         }
         #endif
     }
@@ -166,9 +167,9 @@ import Cocoa
 extension Device {
 
     private static func sizeInches() -> CGFloat {
-        let screen = NSScreen.main()
+        let screen = NSScreen.main
         let description = screen?.deviceDescription
-        let physicalSize = CGDisplayScreenSize(description?["NSScreenNumber"] as? CGDirectDisplayID ?? 0)
+        let physicalSize = CGDisplayScreenSize(description?[.size] as? CGDirectDisplayID ?? 0)
         return floor(sqrt(pow(physicalSize.width, 2) + pow(physicalSize.height, 2)) * 0.0393701);
     }
 

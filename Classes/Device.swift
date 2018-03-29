@@ -10,11 +10,16 @@
 // Apple Device Wiki: https://www.theiphonewiki.com/wiki
 
 
+#if os(iOS)
 import UIKit
+#elseif os(OSX)
+import Cocoa
+#endif
 
 
 public struct Device {
 
+    #if os(iOS)
     /// The name identifying the device (e.g. "Dennis' iPhone").
     public var name: String {
         return UIDevice.current.name
@@ -34,9 +39,11 @@ public struct Device {
     public var localizedModel: String {
         return UIDevice.current.localizedModel
     }
+    #endif
 
     static func code() -> String {
 
+        #if os(OSX)
         func systemInformation(byCode code: String) -> String {
             var size : Int = 0
             sysctlbyname(code, nil, &size, nil, 0)
@@ -44,8 +51,6 @@ public struct Device {
             sysctlbyname(code, &model, &size, nil, 0)
             return String.init(validatingUTF8: model) ?? ""
         }
-        
-        #if os(OSX)
         return systemInformation(byCode: "hw.model")
         #else
         var systemInfo = utsname()
@@ -62,7 +67,7 @@ public struct Device {
 extension Device {
 
     static public func version() -> String {
-        return String(describing: model()) + " " + String(describing: sizeInches()) + "-inch"
+        return model().description + " " + size().description
     }
 
 }
