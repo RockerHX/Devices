@@ -1,0 +1,12 @@
+PODS:
+  - Devices (0.2.2)
+
+DEPENDENCIES:
+  - Devices
+
+SPEC CHECKSUMS:
+  Devices: aed28cdb4ba537875fb3c2cbb2d9dc01b0e150ce
+
+PODFILE CHECKSUM: 10c3697d9296352bf0b1eb5b1a5d8edef9ed37a8
+
+COCOAPODS: 1.4.0
