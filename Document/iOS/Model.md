@@ -79,3 +79,14 @@ func iOSDeviceModel() {
     }
 }
 ```
+
+or simulator
+
+```swift
+switch Device.model() {
+case .simulator(.iPhone8):
+    print("iPhone8")
+default:
+    print("other device.")
+}
+```

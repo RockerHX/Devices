@@ -16,10 +16,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if Device.model().isPhone {
-            print(Device.model().description)
-        }
-
         #if os(iOS)
         iOSDeviceFamily()
         iOSDeviceModel()
