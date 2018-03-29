@@ -1,11 +1,11 @@
 PODS:
-  - Devices (0.1.1)
+  - Devices (0.3.0)
 
 DEPENDENCIES:
   - Devices
 
 SPEC CHECKSUMS:
-  Devices: 6bfebcbdf474328e84da75dd76f3ee1b4adde750
+  Devices: 8c8d5d917ba1bcefd2648da89abc1c4c02c91da6
 
 PODFILE CHECKSUM: 757d959b42ae3a98100a4c7f970ca278c4734ad1
 
