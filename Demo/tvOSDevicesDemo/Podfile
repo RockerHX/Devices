@@ -4,6 +4,7 @@ platform :tvos, '9.0'
 target 'tvOSDevicesDemo' do
   use_frameworks!
 
-  pod "Devices"
+#  pod "Devices"
+  pod "Devices", :path => '../../'
 
 end
