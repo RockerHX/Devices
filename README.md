@@ -4,7 +4,7 @@
 ![Swift](https://img.shields.io/badge/Swift-4.0-orange.svg?style=flat)
 ![Xcode](https://img.shields.io/badge/Xcode-9.0-orange.svg?style=flat)
 [![Platform](https://img.shields.io/cocoapods/p/Devices.svg?style=flat)](http://cocoapods.org/pods/Devices)
-![Supported](https://img.shields.io/badge/Supported-iOS9%20%7C%20OSX%2010.11%20%7C%20tvOS%209.0%20%7C%20watchOS%201.0-4BC51D.svg?style=flat)
+![Supported](https://img.shields.io/badge/Supported-iOS9%20%7C%20OSX%2010.11%20%7C%20tvOS%209.0%20%7C%20watchOS%202.0-4BC51D.svg?style=flat)
 [![License](https://img.shields.io/cocoapods/l/Devices.svg?style=flat)](http://cocoapods.org/pods/Devices)
 
 # Installation
