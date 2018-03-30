@@ -4,6 +4,7 @@ platform :watchos, '2.0'
 target 'watchOSDevicesDemo WatchKit Extension' do
   use_frameworks!
 
-    pod "Devices"
+#  pod "Devices"
+  pod "Devices", :path => '../../'
 
 end

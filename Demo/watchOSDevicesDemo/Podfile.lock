@@ -1,12 +1,16 @@
 PODS:
-  - Devices (0.4.0)
+  - Devices (0.4.1)
 
 DEPENDENCIES:
-  - Devices
+  - Devices (from `../../`)
+
+EXTERNAL SOURCES:
+  Devices:
+    :path: ../../
 
 SPEC CHECKSUMS:
-  Devices: 2f9f9889fd2f934eef3a86364667532b2b4b8aae
+  Devices: bad871451a1a9f3ad454212d1b251b5971a1d68e
 
-PODFILE CHECKSUM: c3e868026f4decb8f05e86083ee21cfb4758dbcb
+PODFILE CHECKSUM: c3267de66ee8434d60f16991b7d3c35c5fadc71d
 
 COCOAPODS: 1.4.0
