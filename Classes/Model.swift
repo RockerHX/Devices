@@ -352,18 +352,6 @@ extension Device.Model {
         return allPads.map{ .simulator($0) }
     }
 
-    #elseif os(tvOS)
-
-    /// All TVs
-    public static var allTVs: [Device.Model] {
-        return [.AppleTV4Gen, .AppleTV4K]
-    }
-
-    /// All simulator TVs
-    public static var allSimulatorTVs: [Device.Model] {
-        return allTVs.map{ .simulator($0) }
-    }
-
     #elseif os(OSX)
 
     /// All Mac mini
@@ -413,16 +401,28 @@ extension Device.Model {
         return [.MacPro2012Mid, .MacPro2013Late, .MacPro2017Early]
     }
 
+    #elseif os(tvOS)
+
+    /// All TVs
+    public static var allTVs: [Device.Model] {
+        return [.AppleTV4Gen, .AppleTV4K]
+    }
+
+    /// All simulator TVs
+    public static var allSimulatorTVs: [Device.Model] {
+        return allTVs.map{ .simulator($0) }
+    }
+
     #elseif os(watchOS)
 
     /// All Watchs
     public static var allWatchs: [Device.Model] {
-        return [.AppleWatch, .AppleWatchSeries1, .AppleWatchSeries2, .AppleWatchSeries2]
+        return [.AppleWatch, .AppleWatchSeries1, .AppleWatchSeries2, .AppleWatchSeries3]
     }
 
     /// All simulator Watchs
     public static var allSimulatorWatchs: [Device.Model] {
-    return allWatchs.map{ .simulator($0) }
+        return allWatchs.map{ .simulator($0) }
     }
 
     #endif

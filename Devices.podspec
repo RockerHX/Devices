@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Devices"
-  s.version      = "0.4.0"
+  s.version      = "0.4.1"
   s.summary      = "Devices lib take device information which you need."
 
   # This description is used to generate tags and improve search results.
@@ -81,6 +81,7 @@ Pod::Spec.new do |s|
   #
 
   s.source       = { :git => "https://github.com/RockerHX/Devices.git", :tag => "#{s.version}" }
+  # s.source       = { :git => "../"}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
