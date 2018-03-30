@@ -132,6 +132,9 @@ Demo code:
 ## OSX
 [OSX Demo Code](/Document/OSX/OSX.md)
 
+## tvOS
+[tvOS Demo Code](/Document/tvOS/tvOS.md)
+
 # License
 
 Device is available under the MIT license. See the LICENSE file for more info.
