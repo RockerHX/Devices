@@ -1,0 +1,9 @@
+# Uncomment the next line to define a global platform for your project
+platform :watchos, '2.0'
+
+target 'watchOSDevicesDemo WatchKit Extension' do
+  use_frameworks!
+
+    pod "Devices"
+
+end
