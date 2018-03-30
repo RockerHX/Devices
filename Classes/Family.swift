@@ -67,11 +67,13 @@ extension Device {
             return .XServe
         }
         #elseif os(tvOS)
-        if code.hasPrefix("AppleTV") {
+        if code.hasPrefix("Apple TV") {
             return .AppleTV
         }
         #elseif os(watchOS)
-        return .AppleWatch
+        if code.hasPrefix("Apple Watch") {
+            return .AppleWatch
+        }
         #endif
         if code == "i386" || code == "x86_64" {
             return .simulator

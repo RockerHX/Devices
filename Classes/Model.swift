@@ -468,114 +468,114 @@ extension Device.Model: CustomStringConvertible {
 
     public var identifier: String {
         #if os(iOS)
-            switch self {
-            /*** iPod ***/
-            case .iPodTouch5Gen:        return "iPod Touch 5"
-            case .iPodTouch6Gen:        return "iPod Touch 6"
-            /*** iPhone ***/
-            case .iPhone4:              return "iPhone 4"
-            case .iPhone4S:             return "iPhone 4s"
-            case .iPhone5:              return "iPhone 5"
-            case .iPhone5C:             return "iPhone 5c"
-            case .iPhone5S:             return "iPhone 5s"
-            case .iPhone6:              return "iPhone 6"
-            case .iPhone6Plus:          return "iPhone 6 Plus"
-            case .iPhone6S:             return "iPhone 6s"
-            case .iPhone6SPlus:         return "iPhone 6s Plus"
-            case .iPhone7:              return "iPhone 7"
-            case .iPhone7Plus:          return "iPhone 7 Plus"
-            case .iPhoneSE:             return "iPhone SE"
-            case .iPhone8:              return "iPhone 8"
-            case .iPhone8Plus:          return "iPhone 8 Plus"
-            case .iPhoneX:              return "iPhone X"
-            /*** iPad ***/
-            case .iPad3:                return "iPad 3"
-            case .iPad4:                return "iPad 4"
-            case .iPadAir:              return "iPad Air"
-            case .iPadAir2:             return "iPad Air 2"
-            case .iPad5:                return "iPad 5"
-            case .iPadMini:             return "iPad Mini"
-            case .iPadMini2:            return "iPad Mini 2"
-            case .iPadMini3:            return "iPad Mini 3"
-            case .iPadMini4:            return "iPad Mini 4"
-            case .iPadPro9_7Inch:       return "iPad Pro (9.7-inch)"
-            case .iPadPro12_9Inch:      return "iPad Pro (12.9-inch)"
-            case .iPadPro12_9Inch2:     return "iPad Pro (12.9-inch) 2"
-            case .iPadPro10_5Inch:      return "iPad Pro (10.5-inch)"
-            /*** HomePod ***/
-            case .HomePod:              return "HomePod"
-            /*** Simulator ***/
-            case .simulator(let model): return "Simulator (\(model))"
-            /*** unknown ***/
-            case .unknown:              return "unknown"
-            }
+        switch self {
+        /*** iPod ***/
+        case .iPodTouch5Gen:        return "iPod Touch 5"
+        case .iPodTouch6Gen:        return "iPod Touch 6"
+        /*** iPhone ***/
+        case .iPhone4:              return "iPhone 4"
+        case .iPhone4S:             return "iPhone 4s"
+        case .iPhone5:              return "iPhone 5"
+        case .iPhone5C:             return "iPhone 5c"
+        case .iPhone5S:             return "iPhone 5s"
+        case .iPhone6:              return "iPhone 6"
+        case .iPhone6Plus:          return "iPhone 6 Plus"
+        case .iPhone6S:             return "iPhone 6s"
+        case .iPhone6SPlus:         return "iPhone 6s Plus"
+        case .iPhone7:              return "iPhone 7"
+        case .iPhone7Plus:          return "iPhone 7 Plus"
+        case .iPhoneSE:             return "iPhone SE"
+        case .iPhone8:              return "iPhone 8"
+        case .iPhone8Plus:          return "iPhone 8 Plus"
+        case .iPhoneX:              return "iPhone X"
+        /*** iPad ***/
+        case .iPad3:                return "iPad 3"
+        case .iPad4:                return "iPad 4"
+        case .iPadAir:              return "iPad Air"
+        case .iPadAir2:             return "iPad Air 2"
+        case .iPad5:                return "iPad 5"
+        case .iPadMini:             return "iPad Mini"
+        case .iPadMini2:            return "iPad Mini 2"
+        case .iPadMini3:            return "iPad Mini 3"
+        case .iPadMini4:            return "iPad Mini 4"
+        case .iPadPro9_7Inch:       return "iPad Pro (9.7-inch)"
+        case .iPadPro12_9Inch:      return "iPad Pro (12.9-inch)"
+        case .iPadPro12_9Inch2:     return "iPad Pro (12.9-inch) 2"
+        case .iPadPro10_5Inch:      return "iPad Pro (10.5-inch)"
+        /*** HomePod ***/
+        case .HomePod:              return "HomePod"
+        /*** Simulator ***/
+        case .simulator(let model): return "Simulator (\(model))"
+        /*** unknown ***/
+        case .unknown:              return "unknown"
+        }
         #elseif os(OSX)
-            switch self {
-            /*** Mac Mini ***/
-            case .MacMini2012Late:                  return "Mac Mini Late 2012"
-            case .MacMini2014Late:                  return "Mac Mini Late 2014"
-            /*** MacBook Air ***/
-            case .MacBookAir2012Mid:                return "MacBook Air Mid 2012"
-            case .MacBookAir2013MidAnd2014Early:    return "MacBook Air Mid 2013 and Early 2014"
-            case .MacBookAir2015Early:              return "MacBook Air Early 2015"
-            case .MacBookAir2017Mid:                return "MacBook Air Mid 2017"
-            /*** MacBook ***/
-            case .MacBook2015Early:                 return "MacBook Mid 2017"
-            case .MacBook2016Early:                 return "MacBook Mid 2017"
-            case .MacBook2017Mid:                   return "MacBook Mid 2017"
-            /*** MacBook Pro ***/
-            case .MacBookPro2010Mid:                return "MacBook Pro Mid 2010"
-            case .MacBookPro2011:                   return "MacBook Pro Mid 2011"
-            case .MacBookPro2012Mid:                return "MacBook Pro Mid 2012"
-            /*** MacBook Pro Retina ***/
-            case .MacBookProRetina2012Mid:          return "MacBook Pro Retina Mid 2012"
-            case .MacBookProRetina2012Late:         return "MacBook Pro Retina Late 2012"
-            case .MacBookProRetina2014Mid:          return "MacBook Pro Retina Mid 2014"
-            case .MacBookProRetina2015Early:        return "MacBook Pro Retina Early 2015"
-            case .MacBookProRetina2015Mid:          return "MacBook Pro Retina Mid 2015"
-            case .MacBookProRetina2016Late:         return "MacBook Pro Retina Late 2016"
-            case .MacBookProRetina2017Mid:          return "MacBook Pro Retina Mid 2017"
-            /*** iMac ***/
-            case .iMac2012Late:                     return "iMac Late 2012"
-            case .iMac2013Late:                     return "iMac Late 2013"
-            case .iMac2014Mid:                      return "iMac Mid 2014"
-            case .iMac2015Late:                     return "iMac Late 2015"
-            case .iMac2017:                         return "iMac 2017"
-            /*** iMac Retina ***/
-            case .iMacRetina2014Late:               return "iMac Retina Late 2014"
-            case .iMacRetina2015Late:               return "iMac Retina Late 2015"
-            case .iMacRetina2017Mid:                return "iMac Retina Min 2017"
-            /*** iMac Pro ***/
-            case .iMacPro:                          return "iMac Pro"
-            /*** Mac Pro ***/
-            case .MacPro2012Mid:                    return "Mac Pro Mid 2012"
-            case .MacPro2013Late:                   return "Mac Pro Late 2013"
-            case .MacPro2017Early:                  return "Mac Pro Early 2017"
-            /*** Simulator ***/
-            case .simulator:                        return "OSX Device not have simulator"
-            /*** unknown ***/
-            case .unknown:                          return "unknown"
-            }
+        switch self {
+        /*** Mac Mini ***/
+        case .MacMini2012Late:                  return "Mac Mini Late 2012"
+        case .MacMini2014Late:                  return "Mac Mini Late 2014"
+        /*** MacBook Air ***/
+        case .MacBookAir2012Mid:                return "MacBook Air Mid 2012"
+        case .MacBookAir2013MidAnd2014Early:    return "MacBook Air Mid 2013 and Early 2014"
+        case .MacBookAir2015Early:              return "MacBook Air Early 2015"
+        case .MacBookAir2017Mid:                return "MacBook Air Mid 2017"
+        /*** MacBook ***/
+        case .MacBook2015Early:                 return "MacBook Mid 2017"
+        case .MacBook2016Early:                 return "MacBook Mid 2017"
+        case .MacBook2017Mid:                   return "MacBook Mid 2017"
+        /*** MacBook Pro ***/
+        case .MacBookPro2010Mid:                return "MacBook Pro Mid 2010"
+        case .MacBookPro2011:                   return "MacBook Pro Mid 2011"
+        case .MacBookPro2012Mid:                return "MacBook Pro Mid 2012"
+        /*** MacBook Pro Retina ***/
+        case .MacBookProRetina2012Mid:          return "MacBook Pro Retina Mid 2012"
+        case .MacBookProRetina2012Late:         return "MacBook Pro Retina Late 2012"
+        case .MacBookProRetina2014Mid:          return "MacBook Pro Retina Mid 2014"
+        case .MacBookProRetina2015Early:        return "MacBook Pro Retina Early 2015"
+        case .MacBookProRetina2015Mid:          return "MacBook Pro Retina Mid 2015"
+        case .MacBookProRetina2016Late:         return "MacBook Pro Retina Late 2016"
+        case .MacBookProRetina2017Mid:          return "MacBook Pro Retina Mid 2017"
+        /*** iMac ***/
+        case .iMac2012Late:                     return "iMac Late 2012"
+        case .iMac2013Late:                     return "iMac Late 2013"
+        case .iMac2014Mid:                      return "iMac Mid 2014"
+        case .iMac2015Late:                     return "iMac Late 2015"
+        case .iMac2017:                         return "iMac 2017"
+        /*** iMac Retina ***/
+        case .iMacRetina2014Late:               return "iMac Retina Late 2014"
+        case .iMacRetina2015Late:               return "iMac Retina Late 2015"
+        case .iMacRetina2017Mid:                return "iMac Retina Min 2017"
+        /*** iMac Pro ***/
+        case .iMacPro:                          return "iMac Pro"
+        /*** Mac Pro ***/
+        case .MacPro2012Mid:                    return "Mac Pro Mid 2012"
+        case .MacPro2013Late:                   return "Mac Pro Late 2013"
+        case .MacPro2017Early:                  return "Mac Pro Early 2017"
+        /*** Simulator ***/
+        case .simulator:                        return "OSX Device not have simulator"
+        /*** unknown ***/
+        case .unknown:                          return "unknown"
+        }
         #elseif os(tvOS)
-            switch self {
-            case .AppleTV4Gen: return "Apple TV 4"
-            case .AppleTV4K: return "Apple TV 4K"
-            /*** Simulator ***/
-            case .simulator(let model): return "Simulator (\(model))"
-            /*** unknown ***/
-            case .unknown: return "unknown"
-            }
+        switch self {
+        case .AppleTV4Gen: return "Apple TV 4"
+        case .AppleTV4K: return "Apple TV 4K"
+        /*** Simulator ***/
+        case .simulator(let model): return "Simulator (\(model))"
+        /*** unknown ***/
+        case .unknown: return "unknown"
+        }
         #elseif os(watchOS)
-            switch self {
-            case .AppleWatch: return "Apple Watch (1st generation)"
-            case .AppleWatchSeries1: return "Apple Watch Series 1"
-            case .AppleWatchSeries2: return "Apple Watch Series 2"
-            case .AppleWatchSeries3: return "Apple Watch Series 3"
-            /*** Simulator ***/
-            case .simulator(let model): return "Simulator (\(model))"
-            /*** unknown ***/
-            case .unknown: return "unknown"
-            }
+        switch self {
+        case .AppleWatch: return "Apple Watch (1st generation)"
+        case .AppleWatchSeries1: return "Apple Watch Series 1"
+        case .AppleWatchSeries2: return "Apple Watch Series 2"
+        case .AppleWatchSeries3: return "Apple Watch Series 3"
+        /*** Simulator ***/
+        case .simulator(let model): return "Simulator (\(model))"
+        /*** unknown ***/
+        case .unknown: return "unknown"
+        }
         #endif
     }
 }

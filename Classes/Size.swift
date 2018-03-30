@@ -37,6 +37,10 @@ extension Device {
         case screen24Inch
         case screen27Inch
 
+        #elseif os(watchOS)
+        case size38mm
+        case size42mm
+
         #endif
 
         static public func > (lhs: Size, rhs: Size) -> Bool {
@@ -104,6 +108,12 @@ extension Device.Size: CustomStringConvertible {
         }
         #elseif os(tvOS)
         return  "unknown"
+        #elseif os(watchOS)
+        switch self {
+        case .size38mm:         return "38mm"
+        case .size42mm:         return "42mm"
+        case .unknown:          return "unknown"
+        }
         #endif
     }
 }
@@ -204,6 +214,36 @@ extension Device {
 
     static public func isRetina() -> Bool {
         return (NSScreen.main?.backingScaleFactor ?? 0) > 1.0
+    }
+
+}
+
+
+#elseif os(watchOS)
+
+
+import WatchKit
+
+
+// MARK: - Size Methods -
+extension Device {
+
+    private static func sizeInches() -> (CGFloat, CGFloat) {
+        let size = WKInterfaceDevice.current().screenBounds.size
+        return (size.width, size.height)
+    }
+
+    static public func size() -> Size {
+        let size = sizeInches()
+
+        switch size {
+        case (136, 170):
+            return .size38mm
+        case (156, 195):
+            return .size42mm
+        default:
+            return .unknown
+        }
     }
 
 }
