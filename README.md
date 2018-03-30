@@ -7,6 +7,18 @@
 ![Supported](https://img.shields.io/badge/Supported-iOS9%20%7C%20OSX%2010.11%20%7C%20tvOS%209.0%20%7C%20watchOS%202.0-4BC51D.svg?style=flat)
 [![License](https://img.shields.io/cocoapods/l/Devices.svg?style=flat)](http://cocoapods.org/pods/Devices)
 
+## Features
+
+- [x] Device identification
+- [x] Device family detection
+- [x] Device model detection
+- [x] Device size detection
+- [x] Device group detection
+- [x] Simulator detection
+- [ ] Battery state
+- [ ] Battery level
+- [x] Equatable
+
 # Installation
 ## CocoaPods
 Devices is available through [CocoaPods](http://cocoapods.org). To install
@@ -61,7 +73,7 @@ func iOSDeviceModel() {
     /*** HomePod ***/
     case .HomePod:
         print("Device is a \(model)")
-    case .simulator(let model):
+    case .simulator(.iPhoneX):
         print("Device is a \(model)")
     /*** unknown ***/
     case .unknown:
