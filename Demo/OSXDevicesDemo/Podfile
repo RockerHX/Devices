@@ -4,6 +4,7 @@ platform :osx, '10.11'
 target 'OSXDevicesDemo' do
   use_frameworks!
 
-  pod "Devices"
+#  pod "Devices"
+  pod "Devices", :path => '../../'
 
 end
