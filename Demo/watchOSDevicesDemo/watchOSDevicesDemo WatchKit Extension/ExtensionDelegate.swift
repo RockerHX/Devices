@@ -8,26 +8,12 @@
 
 
 import WatchKit
-import Devices
 
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
 
     func applicationDidFinishLaunching() {
         // Perform any final initialization of your application.
-
-        print(Device.family())
-        print(Device.model())
-        let size = Device.size()
-        print(size)
-        switch size {
-        case .size38mm:
-            print("38mm")
-        case .size42mm:
-            print("42mm")
-        case .unknown:
-            print("unknown")
-        }
     }
 
     func applicationDidBecomeActive() {
