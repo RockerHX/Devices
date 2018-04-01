@@ -10,10 +10,13 @@
 #if os(iOS)
 
 
+import UIKit
+
+
 extension Device {
 
     /// range: 0 - 1
-    static public var brightness: Float {
+    static public var brightness: CGFloat {
         get {
             return UIScreen.main.brightness
         }
