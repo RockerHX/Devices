@@ -16,7 +16,7 @@
 - [x] Device group detection
 - [x] Simulator detection
 - [x] Brightness detection
-- [ ] Battery detection
+- [x] Battery detection
 - [x] Equatable
 
 # Installation
