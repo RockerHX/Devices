@@ -161,6 +161,36 @@ func OSXBrightness() {
 }
 ```
 
+### Battery
+
+iOS Simple code:
+```swift
+func iOSBattery() {
+    print(Device.Battery.state)
+    let batteryState = Device.Battery.state
+
+    switch batteryState {
+    case .full:
+        print("Your battery is happy! 😊")
+    case .charging(let level):
+        print("Your battery level: \(level)")
+    case .unplugged(let level):
+        print("Your battery level: \(level)")
+    }
+
+    if Device.Battery.lowPowerMode {
+        print("Low Power mode is enabled! 🔋")
+    } else {
+        print("Low Power mode is disabled! 😊")
+    }
+
+    guard batteryState < .charging(80) else {
+        print("Your battery is happy! 😊")
+        return
+    }
+}
+```
+
 
 ## OSX
 [OSX Demo Code](/Document/OSX/OSX.md)
