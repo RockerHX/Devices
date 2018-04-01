@@ -15,8 +15,8 @@
 - [x] Device size detection
 - [x] Device group detection
 - [x] Simulator detection
-- [ ] Battery state
-- [ ] Battery level
+- [x] Brightness detection
+- [ ] Battery detection
 - [x] Equatable
 
 # Installation
@@ -140,6 +140,27 @@ func iOSSizeHelper() {
 ```
 Demo code:
 [Size Helper Demo Code](/Document/iOS/SizeHelper.md)
+
+### Brightness
+Apple not provide api to get brightness on tvOS and watchOS, and if you want change watchOS's device brightness will be rejected.
+So, brightness api can only support iOS and OSX platform.
+iOS Simple code:
+```swift
+func iOSBrightness() {
+    print("Device.brightness: \(Device.brightness)")
+    Device.brightness = 0.8
+}
+
+```
+OSX Simple code:
+```swift
+func OSXBrightness() {
+    print("Device.Brightness.level: \(Device.Brightness.level)")
+    Device.Brightness.level = .level_5
+    Device.Brightness.level = .custom(0.5)
+}
+```
+
 
 ## OSX
 [OSX Demo Code](/Document/OSX/OSX.md)
