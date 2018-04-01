@@ -23,12 +23,12 @@ class ViewController: NSViewController {
         OSXModelHelper()
         OSXDeviceSize()
         OSXSizeHelper()
+        OSXBrightness()
         #elseif os(tvOS)
 
         #elseif os(watchOS)
 
         #endif
-
     }
 
     func OSXDeviceFamily() {
@@ -202,6 +202,12 @@ class ViewController: NSViewController {
         if Device.isRetina() {
             print("It's a retina display")
         }
+    }
+
+    func OSXBrightness() {
+        print("Device.Brightness.level: \(Device.Brightness.level)")
+        Device.Brightness.level = .level_5
+        Device.Brightness.level = .custom(0.5)
     }
 
 }

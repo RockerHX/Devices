@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         iOSModelHelper()
         iOSDeviceSize()
         iOSSizeHelper()
+        iOSBrightness()
         #elseif os(OSX)
 
         #elseif os(tvOS)
@@ -194,6 +195,11 @@ class ViewController: UIViewController {
         if Device.isRetina() {
             print("It's a retina display")
         }
+    }
+
+    func iOSBrightness() {
+        print("Device.brightness: \(Device.brightness)")
+        Device.brightness = 0.8
     }
 
 }

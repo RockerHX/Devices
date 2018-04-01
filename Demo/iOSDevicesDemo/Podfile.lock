@@ -1,5 +1,5 @@
 PODS:
-  - Devices (0.4.1)
+  - Devices (0.5.0)
 
 DEPENDENCIES:
   - Devices (from `../../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../../
 
 SPEC CHECKSUMS:
-  Devices: bad871451a1a9f3ad454212d1b251b5971a1d68e
+  Devices: 9423cfc20a119eaf99f740224c5b7daa109a6673
 
 PODFILE CHECKSUM: 9820f37243f555367c72915c8cee35715a27ae99
 
