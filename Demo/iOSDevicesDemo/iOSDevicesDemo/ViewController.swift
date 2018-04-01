@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         iOSDeviceSize()
         iOSSizeHelper()
         iOSBrightness()
+        iOSBattery()
         #elseif os(OSX)
 
         #elseif os(tvOS)
@@ -200,6 +201,31 @@ class ViewController: UIViewController {
     func iOSBrightness() {
         print("Device.brightness: \(Device.brightness)")
         Device.brightness = 0.8
+    }
+
+    func iOSBattery() {
+        print(Device.Battery.state)
+        let batteryState = Device.Battery.state
+
+        switch batteryState {
+        case .full:
+            print("Your battery is happy! 😊")
+        case .charging(let level):
+            print("Your battery level: \(level)")
+        case .unplugged(let level):
+            print("Your battery level: \(level)")
+        }
+
+        if Device.Battery.lowPowerMode {
+            print("Low Power mode is enabled! 🔋")
+        } else {
+            print("Low Power mode is disabled! 😊")
+        }
+
+        guard batteryState < .charging(80) else {
+            print("Your battery is happy! 😊")
+            return
+        }
     }
 
 }
