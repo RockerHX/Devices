@@ -13,7 +13,7 @@ func OSXDeviceFamily() {
 }
 ```
 Demo code:
-[Family Demo Code](/Family.md)
+[Family Demo Code](../Family.md)
 
 ### Device model
 
@@ -31,7 +31,7 @@ func OSXDeviceModel() {
 }
 ```
 Demo code:
-[Model Demo Code](/Model.md)
+[Model Demo Code](../Model.md)
 
 ### Device screen size
 
@@ -48,7 +48,7 @@ func OSXDeviceSize() {
 }
 ```
 Demo code:
-[Size Demo Code](/Size.md)
+[Size Demo Code](../Size.md)
 
 ## Helpers
 
@@ -65,7 +65,7 @@ func OSXModelHelper() {
 }
 ```
 Demo code:
-[Model Helper Demo Code](/ModelHelper.md)
+[Model Helper Demo Code](../ModelHelper.md)
 
 ### Size
 You can use operator like `>`, `<`, `>=`, `<=`, `==`, `!=`
@@ -85,4 +85,4 @@ func OSXSizeHelper() {
 }
 ```
 Demo code:
-[Size Helper Demo Code](/SizeHelper.md)
+[Size Helper Demo Code](../SizeHelper.md)
