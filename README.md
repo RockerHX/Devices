@@ -4,7 +4,7 @@
 ![Swift3.2](https://img.shields.io/badge/Swift-3.2-orange.svg?style=flat)
 ![Swift4.0](https://img.shields.io/badge/Swift-4.0-orange.svg?style=flat)
 ![Swift4.1](https://img.shields.io/badge/Swift-4.1-orange.svg?style=flat)
-![Xcode](https://img.shields.io/badge/Xcode-8.2-orange%20%7C%20Xcode-9.0-orange.svg?style=flat)
+![Xcode](https://img.shields.io/badge/Xcode-9.0-orange.svg?style=flat)
 [![Platform](https://img.shields.io/cocoapods/p/Devices.svg?style=flat)](http://cocoapods.org/pods/Devices)
 ![Supported](https://img.shields.io/badge/Supported-iOS9%20%7C%20OSX%2010.11%20%7C%20tvOS%209.0%20%7C%20watchOS%202.0-4BC51D.svg?style=flat)
 [![License](https://img.shields.io/cocoapods/l/Devices.svg?style=flat)](http://cocoapods.org/pods/Devices)
