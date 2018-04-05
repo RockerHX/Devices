@@ -97,6 +97,8 @@ class ViewController: UIViewController {
             print("Device is a \(model)")
         case .iPad5:
             print("Device is a \(model)")
+        case .iPad6:
+            print("Device is a \(model)")
         case .iPadAir:
             print("Device is a \(model)")
         case .iPadAir2:
