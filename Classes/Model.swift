@@ -34,6 +34,7 @@ extension Device {
         case iPad3
         case iPad4
         case iPad5
+        case iPad6
         case iPadAir
         case iPadAir2
         case iPadMini
@@ -151,6 +152,7 @@ extension Device {
         case "iPad3,1", "iPad3,2", "iPad3,3":           return .iPad3
         case "iPad3,4", "iPad3,5", "iPad3,6":           return .iPad4
         case "iPad6,11", "iPad6,12":                    return .iPad5
+        case "iPad7,6":                                 return .iPad6
         case "iPad4,1", "iPad4,2", "iPad4,3":           return .iPadAir
         case "iPad5,3", "iPad5,4":                      return .iPadAir2
         case "iPad2,5", "iPad2,6", "iPad2,7":           return .iPadMini
@@ -314,9 +316,10 @@ extension Device.Model {
     public static var allPads: [Device.Model] {
         return [.iPad3,
                 .iPad4,
+                .iPad5,
+                .iPad6,
                 .iPadAir,
                 .iPadAir2,
-                .iPad5,
                 .iPadMini,
                 .iPadMini2,
                 .iPadMini3,
@@ -491,9 +494,10 @@ extension Device.Model: CustomStringConvertible {
         /*** iPad ***/
         case .iPad3:                return "iPad 3"
         case .iPad4:                return "iPad 4"
+        case .iPad5:                return "iPad 5"
+        case .iPad6:                return "iPad 6"
         case .iPadAir:              return "iPad Air"
         case .iPadAir2:             return "iPad Air 2"
-        case .iPad5:                return "iPad 5"
         case .iPadMini:             return "iPad Mini"
         case .iPadMini2:            return "iPad Mini 2"
         case .iPadMini3:            return "iPad Mini 3"
