@@ -197,10 +197,11 @@ func iOSBattery() {
 
 iOS Simple code:
 ```swift
-func iOSProject() {
-    print("Build: \(Device.Project().build)")
-    print("Version: \(Device.Project().version)")
-    print("wholeVersion: \(Device.Project().wholeVersion)")
+func iOSApplication() {
+    print("Build: \(Device.Application.shared.build)")
+    print("Version: \(Device.Application.shared.version)")
+    print("wholeVersion: \(Device.Application.shared.wholeVersion)")
+    print("firstLanuch: \(Device.Application.shared.firstLanuch)")
 }
 ```
 
