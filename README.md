@@ -193,6 +193,17 @@ func iOSBattery() {
 }
 ```
 
+### Project
+
+iOS Simple code:
+```swift
+func iOSProject() {
+    print("Build: \(Device.Project().build)")
+    print("Version: \(Device.Project().version)")
+    print("wholeVersion: \(Device.Project().wholeVersion)")
+}
+```
+
 
 ## OSX
 [OSX Demo Code](/Document/OSX/OSX.md)
