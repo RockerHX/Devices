@@ -25,7 +25,7 @@ class InterfaceController: WKInterfaceController {
         watchOSModelHelper()
         watchOSDeviceSize()
         watchOSSizeHelper()
-        watchOSProject()
+        watchOSApplication()
         #endif
 
     }
@@ -114,10 +114,11 @@ class InterfaceController: WKInterfaceController {
         }
     }
 
-    func watchOSProject() {
-        print("Build: \(Device.Project().build)")
-        print("Version: \(Device.Project().version)")
-        print("wholeVersion: \(Device.Project().wholeVersion)")
+    func watchOSApplication() {
+        print("Build: \(Device.Application.shared.build)")
+        print("Version: \(Device.Application.shared.version)")
+        print("wholeVersion: \(Device.Application.shared.wholeVersion)")
+        print("firstLanuch: \(Device.Application.shared.firstLanuch)")
     }
 
 }

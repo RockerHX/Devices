@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         tvOSDeviceFamily()
         tvOSDeviceModel()
         tvOSModelHelper()
-        tvOSProject()
+        tvOSApplication()
         #elseif os(watchOS)
         #endif
 
@@ -63,10 +63,11 @@ class ViewController: UIViewController {
         }
     }
 
-    func tvOSProject() {
-        print("Build: \(Device.Project().build)")
-        print("Version: \(Device.Project().version)")
-        print("wholeVersion: \(Device.Project().wholeVersion)")
+    func tvOSApplication() {
+        print("Build: \(Device.Application.shared.build)")
+        print("Version: \(Device.Application.shared.version)")
+        print("wholeVersion: \(Device.Application.shared.wholeVersion)")
+        print("firstLanuch: \(Device.Application.shared.firstLanuch)")
     }
 
 }
