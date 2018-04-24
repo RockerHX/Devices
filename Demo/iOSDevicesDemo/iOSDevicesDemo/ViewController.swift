@@ -24,6 +24,7 @@ class ViewController: UIViewController {
         iOSSizeHelper()
         iOSBrightness()
         iOSBattery()
+        iOSProject()
         #elseif os(OSX)
 
         #elseif os(tvOS)
@@ -228,6 +229,12 @@ class ViewController: UIViewController {
             print("Your battery is happy! 😊")
             return
         }
+    }
+
+    func iOSProject() {
+        print("Build: \(Device.Project().build)")
+        print("Version: \(Device.Project().version)")
+        print("wholeVersion: \(Device.Project().wholeVersion)")
     }
 
 }
