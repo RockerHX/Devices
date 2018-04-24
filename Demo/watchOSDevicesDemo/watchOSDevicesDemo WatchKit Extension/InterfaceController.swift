@@ -25,6 +25,7 @@ class InterfaceController: WKInterfaceController {
         watchOSModelHelper()
         watchOSDeviceSize()
         watchOSSizeHelper()
+        watchOSProject()
         #endif
 
     }
@@ -111,6 +112,12 @@ class InterfaceController: WKInterfaceController {
         if size != .size42mm {
             print("It's not 42mm screen")
         }
+    }
+
+    func watchOSProject() {
+        print("Build: \(Device.Project().build)")
+        print("Version: \(Device.Project().version)")
+        print("wholeVersion: \(Device.Project().wholeVersion)")
     }
 
 }
