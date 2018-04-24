@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         tvOSDeviceFamily()
         tvOSDeviceModel()
         tvOSModelHelper()
+        tvOSProject()
         #elseif os(watchOS)
         #endif
 
@@ -60,6 +61,12 @@ class ViewController: UIViewController {
         if allTVs.contains(model) {
             print("Current device belong to Apple TV ")
         }
+    }
+
+    func tvOSProject() {
+        print("Build: \(Device.Project().build)")
+        print("Version: \(Device.Project().version)")
+        print("wholeVersion: \(Device.Project().wholeVersion)")
     }
 
 }
