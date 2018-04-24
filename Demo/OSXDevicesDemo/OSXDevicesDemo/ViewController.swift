@@ -24,6 +24,7 @@ class ViewController: NSViewController {
         OSXDeviceSize()
         OSXSizeHelper()
         OSXBrightness()
+        OSXProject()
         #elseif os(tvOS)
 
         #elseif os(watchOS)
@@ -208,6 +209,12 @@ class ViewController: NSViewController {
         print("Device.Brightness.level: \(Device.Brightness.level)")
         Device.Brightness.level = .level_5
         Device.Brightness.level = .custom(0.5)
+    }
+
+    func OSXProject() {
+        print("Build: \(Device.Project().build)")
+        print("Version: \(Device.Project().version)")
+        print("wholeVersion: \(Device.Project().wholeVersion)")
     }
 
 }
