@@ -200,6 +200,7 @@ iOS Simple code:
 func iOSApplication() {
     print("Build: \(Device.Application.shared.build)")
     print("Version: \(Device.Application.shared.version)")
+    print("Name: \(Device.Application.shared.name)")
     print("wholeVersion: \(Device.Application.shared.wholeVersion)")
     print("firstLanuch: \(Device.Application.shared.firstLanuch)")
 }
