@@ -20,6 +20,7 @@ extension Device {
         // MARK: - Public Property -
         public private(set) var version: String
         public private(set) var build: String
+        public private(set) var name: String
         public private(set) var wholeVersion: String
         public private(set) var firstLanuch: Bool = true
 
@@ -28,6 +29,11 @@ extension Device {
             let infoDictionary = Bundle.main.infoDictionary
             version = infoDictionary?["CFBundleShortVersionString"] as! String
             build = infoDictionary?["CFBundleVersion"] as! String
+            if let appName = infoDictionary?["CFBundleDisplayName"] as? String {
+                name = appName
+            } else {
+                name = infoDictionary?["CFBundleName"] as! String
+            }
             wholeVersion = "\(version) (Build \(build))"
 
             let key = Key.FirstLanuch.rawValue
