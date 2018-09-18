@@ -30,6 +30,9 @@ extension Device {
         case iPhone8
         case iPhone8Plus
         case iPhoneX
+        case iPhoneXR
+        case iPhoneXS
+        case iPhoneXSMax
         /*** iPad ***/
         case iPad3
         case iPad4
@@ -148,6 +151,9 @@ extension Device {
         case "iPhone10,1", "iPhone10,4":                return .iPhone8
         case "iPhone10,2", "iPhone10,5":                return .iPhone8Plus
         case "iPhone10,3", "iPhone10,6":                return .iPhoneX
+        case "iPhone11,8":                              return .iPhoneXR
+        case "iPhone11,2":                              return .iPhoneXS
+        case "iPhone11,4", "iPhone11,6":                return .iPhoneXSMax
         /*** iPad ***/
         case "iPad3,1", "iPad3,2", "iPad3,3":           return .iPad3
         case "iPad3,4", "iPad3,5", "iPad3,6":           return .iPad4
@@ -491,6 +497,9 @@ extension Device.Model: CustomStringConvertible {
         case .iPhone8:              return "iPhone 8"
         case .iPhone8Plus:          return "iPhone 8 Plus"
         case .iPhoneX:              return "iPhone X"
+        case .iPhoneXR:             return "iPhone XR"
+        case .iPhoneXS:             return "iPhone XS"
+        case .iPhoneXSMax:          return "iPhone XS Max"
         /*** iPad ***/
         case .iPad3:                return "iPad 3"
         case .iPad4:                return "iPad 4"

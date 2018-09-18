@@ -91,6 +91,12 @@ class ViewController: UIViewController {
             print("Device is a \(model)")
         case .iPhoneX:
             print("Device is a \(model)")
+        case .iPhoneXR:
+            print("Device is a \(model)")
+        case .iPhoneXS:
+            print("Device is a \(model)")
+        case .iPhoneXSMax:
+            print("Device is a \(model)")
         /*** iPad ***/
         case .iPad3:
             print("Device is a \(model)")
