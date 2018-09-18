@@ -55,6 +55,8 @@ class InterfaceController: WKInterfaceController {
             print("Device is a \(model)")
         case .AppleWatchSeries3:
             print("Device is a \(model)")
+        case .AppleWatchSeries4:
+            print("Device is a \(model)")
         case .simulator(let model):
             print("Device is a \(model)")
         case .unknown:

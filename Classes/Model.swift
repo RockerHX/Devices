@@ -99,6 +99,7 @@ extension Device {
         case AppleWatchSeries1
         case AppleWatchSeries2
         case AppleWatchSeries3
+        case AppleWatchSeries4
         #endif
         /*** Simulator ***/
         indirect case simulator(Model)
@@ -235,6 +236,7 @@ extension Device {
         case "Watch2,6", "Watch2,7":                         return .AppleWatchSeries1
         case "Watch2,3", "Watch2,4":                         return .AppleWatchSeries2
         case "Watch3,1", "Watch3,2", "Watch3,3", "Watch3,4": return .AppleWatchSeries3
+        case "Watch4,1", "Watch4,2", "Watch4,3", "Watch4,4": return .AppleWatchSeries4
         /*** Simulator ***/
         case "i386", "x86_64":                               return .simulator(getModel(byCode: simulatorCode() ?? "watchOS"))
         default:                                             return .unknown
@@ -584,6 +586,7 @@ extension Device.Model: CustomStringConvertible {
         case .AppleWatchSeries1: return "Apple Watch Series 1"
         case .AppleWatchSeries2: return "Apple Watch Series 2"
         case .AppleWatchSeries3: return "Apple Watch Series 3"
+        case .AppleWatchSeries4: return "Apple Watch Series 4"
         /*** Simulator ***/
         case .simulator(let model): return "Simulator (\(model))"
         /*** unknown ***/
