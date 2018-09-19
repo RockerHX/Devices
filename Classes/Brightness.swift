@@ -116,7 +116,7 @@ extension Device {
                         IOObjectRelease(service)
                     }
                 }
-                return Level(value: brightness)
+                return Level.init(value: brightness)
             }
             set {
                 var iterator: io_iterator_t = 0
