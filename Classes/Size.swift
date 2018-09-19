@@ -20,6 +20,7 @@ extension Device {
         case screen4_7Inch
         case screen5_5Inch
         case screen5_8Inch
+        case screen6_5Inch
         case screen7_9Inch
         case screen9_7Inch
         case screen10_5Inch
@@ -89,6 +90,7 @@ extension Device.Size: CustomStringConvertible {
         case .screen4_7Inch:    return "4.7 inch"
         case .screen5_5Inch:    return "5.5 inch"
         case .screen5_8Inch:    return "5.8 inch"
+        case .screen6_5Inch:    return "6.5 inch"
         case .screen7_9Inch:    return "7.9 inch"
         case .screen9_7Inch:    return "9.7 inch"
         case .screen10_5Inch:   return "10.5 inch"
@@ -148,6 +150,8 @@ extension Device {
             return .screen5_5Inch
         case 812:
             return .screen5_8Inch
+        case 896:
+            return .screen6_5Inch
         case 1024:
             switch model() {
             case .iPadMini, .iPadMini2, .iPadMini3, .iPadMini4:

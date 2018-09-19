@@ -162,6 +162,8 @@ class ViewController: UIViewController {
             print("Device size: \(size.description)")
         case .screen5_8Inch:
             print("Device size: \(size.description)")
+        case .screen6_5Inch:
+            print("Device size: \(size.description)")
         case .screen7_9Inch:
             print("Device size: \(size.description)")
         case .screen9_7Inch:
