@@ -121,6 +121,7 @@
 				TargetAttributes = {
 					C65C0555206C85BF0018CA63 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -162,7 +163,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-OSXDevicesDemo/Pods-OSXDevicesDemo-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-OSXDevicesDemo/Pods-OSXDevicesDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Devices/Devices.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -171,7 +172,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OSXDevicesDemo/Pods-OSXDevicesDemo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-OSXDevicesDemo/Pods-OSXDevicesDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F8C9F1E40F80C4860ECE2255 /* [CP] Check Pods Manifest.lock */ = {
@@ -342,7 +343,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cc.caver.OSXDevicesDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -360,7 +361,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cc.caver.OSXDevicesDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
