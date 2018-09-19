@@ -39,7 +39,9 @@ extension Device {
 
         #elseif os(watchOS)
         case size38mm
+        case size40mm
         case size42mm
+        case size44mm
 
         #endif
 
@@ -111,7 +113,9 @@ extension Device.Size: CustomStringConvertible {
         #elseif os(watchOS)
         switch self {
         case .size38mm:         return "38mm"
+        case .size40mm:         return "40mm"
         case .size42mm:         return "42mm"
+        case .size44mm:         return "44mm"
         case .unknown:          return "unknown"
         }
         #endif
@@ -234,12 +238,15 @@ extension Device {
 
     static public func size() -> Size {
         let size = sizeInches()
-
         switch size {
         case (136, 170):
             return .size38mm
+        case (162, 197):
+            return .size40mm
         case (156, 195):
             return .size42mm
+        case (184, 224):
+            return .size44mm
         default:
             return .unknown
         }

@@ -81,7 +81,11 @@ class InterfaceController: WKInterfaceController {
         switch size {
         case .size38mm:
             print("Device size: \(size.description)")
+        case .size40mm:
+            print("Device size: \(size.description)")
         case .size42mm:
+            print("Device size: \(size.description)")
+        case .size44mm:
             print("Device size: \(size.description)")
         case .unknown:
             print("Device size unknown.")
