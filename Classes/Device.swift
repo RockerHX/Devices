@@ -22,22 +22,22 @@ public struct Device {
 
     #if os(iOS)
     /// The name identifying the device (e.g. "Dennis' iPhone").
-    public var name: String {
+    static public var name: String {
         return UIDevice.current.name
     }
 
     /// The name of the operating system running on the device represented by the receiver (e.g. "iOS" or "tvOS").
-    public var systemName: String {
+    static public var systemName: String {
         return UIDevice.current.systemName
     }
 
     /// The current version of the operating system (e.g. 8.4 or 9.2).
-    public var systemVersion: String {
+    static public var systemVersion: String {
         return UIDevice.current.systemVersion
     }
 
     /// The model of the device as a localized string.
-    public var localizedModel: String {
+    static public var localizedModel: String {
         return UIDevice.current.localizedModel
     }
     #endif
