@@ -120,11 +120,15 @@ class ViewController: UIViewController {
             print("Device is a \(model)")
         case .iPadPro9_7Inch:
             print("Device is a \(model)")
+        case .iPadPro10_5Inch:
+            print("Device is a \(model)")
+        case .iPadPro11Inch:
+            print("Device is a \(model)")
         case .iPadPro12_9Inch:
             print("Device is a \(model)")
         case .iPadPro12_9Inch2:
             print("Device is a \(model)")
-        case .iPadPro10_5Inch:
+        case .iPadPro12_9Inch3:
             print("Device is a \(model)")
         /*** HomePod ***/
         case .HomePod:
