@@ -45,9 +45,11 @@ extension Device {
         case iPadMini3
         case iPadMini4
         case iPadPro9_7Inch
+        case iPadPro10_5Inch
+        case iPadPro11Inch
         case iPadPro12_9Inch
         case iPadPro12_9Inch2
-        case iPadPro10_5Inch
+        case iPadPro12_9Inch3
         /*** HomePod ***/
         case HomePod
         #elseif os(OSX)
@@ -167,9 +169,11 @@ extension Device {
         case "iPad4,7", "iPad4,8", "iPad4,9":           return .iPadMini3
         case "iPad5,1", "iPad5,2":                      return .iPadMini4
         case "iPad6,3", "iPad6,4":                      return .iPadPro9_7Inch
+        case "iPad7,3", "iPad7,4":                      return .iPadPro10_5Inch
+        case "iPad8,1", "iPad8,2", "iPad8,3", "iPad8,4":    return .iPadPro11Inch
         case "iPad6,7", "iPad6,8":                      return .iPadPro12_9Inch
         case "iPad7,1", "iPad7,2":                      return .iPadPro12_9Inch2
-        case "iPad7,3", "iPad7,4":                      return .iPadPro10_5Inch
+        case "iPad8,7", "iPad8,8":                      return .iPadPro12_9Inch3
         /*** HomePod ***/
         case "AudioAccessory1,1":                       return .HomePod
         /*** Simulator ***/
@@ -333,9 +337,11 @@ extension Device.Model {
                 .iPadMini3,
                 .iPadMini4,
                 .iPadPro9_7Inch,
+                .iPadPro10_5Inch,
+                .iPadPro11Inch,
                 .iPadPro12_9Inch,
                 .iPadPro12_9Inch2,
-                .iPadPro10_5Inch]
+                .iPadPro12_9Inch3]
     }
 
     /// All Plus-Sized Devices
@@ -514,9 +520,11 @@ extension Device.Model: CustomStringConvertible {
         case .iPadMini3:            return "iPad Mini 3"
         case .iPadMini4:            return "iPad Mini 4"
         case .iPadPro9_7Inch:       return "iPad Pro (9.7-inch)"
+        case .iPadPro10_5Inch:      return "iPad Pro (10.5-inch)"
+        case .iPadPro11Inch:        return "iPad Pro (11-inch)"
         case .iPadPro12_9Inch:      return "iPad Pro (12.9-inch)"
         case .iPadPro12_9Inch2:     return "iPad Pro (12.9-inch) 2"
-        case .iPadPro10_5Inch:      return "iPad Pro (10.5-inch)"
+        case .iPadPro12_9Inch3:     return "iPad Pro (12.9-inch) 3"
         /*** HomePod ***/
         case .HomePod:              return "HomePod"
         /*** Simulator ***/
