@@ -12,6 +12,7 @@
 | Branch | Build Status | Versions |
 |:---------|:--------------:|:----------:|
 | **master** |[![Build Status](https://travis-ci.org/dennisweissmann/DeviceKit.svg?branch=master)](https://travis-ci.org/dennisweissmann/DeviceKit)| - |
+| **Swift 5.0** |[![Build Status](https://travis-ci.org/dennisweissmann/DeviceKit.svg?branch=swift-4.2)](https://travis-ci.org/dennisweissmann/DeviceKit)| ≥ 1.0.0 |
 | **Swift 4.2** |[![Build Status](https://travis-ci.org/dennisweissmann/DeviceKit.svg?branch=swift-4.2)](https://travis-ci.org/dennisweissmann/DeviceKit)| ≥ 0.8.0 |
 | **Below Swift 4.2** |[![Build Status](https://travis-ci.org/dennisweissmann/DeviceKit.svg?branch=swift-4)](https://travis-ci.org/dennisweissmann/DeviceKit)| < 0.7.2 |
 

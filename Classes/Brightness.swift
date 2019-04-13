@@ -56,7 +56,7 @@ extension Device {
             /// range: 0 - 1
             case custom(Float)
 
-            static fileprivate func `init`(value: Float) -> Level {
+            static fileprivate func translation(value: Float) -> Level {
                 switch value {
                 case 0:             return .level_0
                 case 0.1015625:     return .level_1
@@ -98,7 +98,7 @@ extension Device {
                 case .level_14:             return 0.875
                 case .level_15:             return 0.9375
                 case .level_16:             return 1
-                case .custom(let value):   return value
+                case .custom(let value):    return value
                 }
             }
 
@@ -116,7 +116,7 @@ extension Device {
                         IOObjectRelease(service)
                     }
                 }
-                return Level.init(value: brightness)
+                return Level.translation(value: brightness)
             }
             set {
                 var iterator: io_iterator_t = 0
@@ -135,6 +135,10 @@ extension Device {
 
 }
 
+
+#elseif os(tvOS)
+
+#elseif os(watchOS)
 
 #endif
 

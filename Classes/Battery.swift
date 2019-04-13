@@ -26,6 +26,8 @@ extension Device {
             /// The associated value is in percent (0-100).
             case unplugged(Int)
 
+            case unknown
+
             fileprivate init() {
                 UIDevice.current.isBatteryMonitoringEnabled = true
                 let batteryLevel = Int(round(UIDevice.current.batteryLevel * 100))
@@ -33,7 +35,9 @@ extension Device {
                 case .full: self = .full
                 case .charging: self = .charging(batteryLevel)
                 case .unplugged:self = .unplugged(batteryLevel)
-                case .unknown: self = .full
+                case .unknown: self = .unknown
+                @unknown default:
+                    fatalError()
                 }
                 UIDevice.current.isBatteryMonitoringEnabled = false
             }
@@ -60,6 +64,7 @@ extension Device {
             case .full: return 100
             case .charging(let value): return value
             case .unplugged(let value): return value
+            case .unknown: return 0
             }
         }
 
@@ -76,6 +81,7 @@ extension Device.Battery.State: CustomStringConvertible {
         case .full:                         return "Battery level: 100 % (Full), device is plugged in."
         case .charging(let batteryLevel):   return "Battery level: \(batteryLevel)%, device is plugged in."
         case .unplugged(let batteryLevel):  return "Battery level: \(batteryLevel)%, device is unplugged."
+        case .unknown:                      return "Battery level: 0 % (Unknown), device is plugged in."
         }
     }
 
