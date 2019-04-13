@@ -119,6 +119,7 @@
 				TargetAttributes = {
 					C60BDF12206CD8EF00713CA9 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -160,7 +161,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-tvOSDevicesDemo/Pods-tvOSDevicesDemo-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-tvOSDevicesDemo/Pods-tvOSDevicesDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Devices/Devices.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -169,7 +170,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tvOSDevicesDemo/Pods-tvOSDevicesDemo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-tvOSDevicesDemo/Pods-tvOSDevicesDemo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		52DB5D15251003DDF1B5C8F2 /* [CP] Check Pods Manifest.lock */ = {
@@ -338,7 +339,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cc.caver.tvOSDevicesDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Debug;
@@ -356,7 +357,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cc.caver.tvOSDevicesDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Release;
