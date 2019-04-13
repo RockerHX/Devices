@@ -229,6 +229,8 @@ class ViewController: UIViewController {
             print("Your battery level: \(level)")
         case .unplugged(let level):
             print("Your battery level: \(level)")
+        case .unknown:
+            print("Your battery is error!")
         }
 
         if Device.Battery.lowPowerMode {
