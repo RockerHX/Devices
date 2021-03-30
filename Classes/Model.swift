@@ -14,6 +14,7 @@ extension Device {
         /*** iPod ***/
         case iPodTouch5Gen
         case iPodTouch6Gen
+        case iPodTouch7Gen
         /*** iPhone ***/
         case iPhone4
         case iPhone4S
@@ -33,23 +34,38 @@ extension Device {
         case iPhoneXR
         case iPhoneXS
         case iPhoneXSMax
+        case iPhone11
+        case iPhone11Pro
+        case iPhone11ProMax
+        case iPhoneSE2
+        case iPhone12Mini
+        case iPhone12
+        case iPhone12Pro
+        case iPhone12ProMax
         /*** iPad ***/
         case iPad3
         case iPad4
         case iPad5
         case iPad6
+        case iPad7
+        case iPad8
         case iPadAir
         case iPadAir2
+        case iPadAir3
+        case iPadAir4
         case iPadMini
         case iPadMini2
         case iPadMini3
         case iPadMini4
+        case iPadMini5
         case iPadPro9_7Inch
         case iPadPro10_5Inch
         case iPadPro11Inch
+        case iPadPro11Inch2
         case iPadPro12_9Inch
         case iPadPro12_9Inch2
         case iPadPro12_9Inch3
+        case iPadPro12_9Inch4
         /*** HomePod ***/
         case HomePod
         #elseif os(OSX)
@@ -157,23 +173,38 @@ extension Device {
         case "iPhone11,8":                              return .iPhoneXR
         case "iPhone11,2":                              return .iPhoneXS
         case "iPhone11,4", "iPhone11,6":                return .iPhoneXSMax
+        case "iPhone12,1":                              return .iPhone11
+        case "iPhone12,3":                              return .iPhone11Pro
+        case "iPhone12,5":                              return .iPhone11ProMax
+        case "iPhone12,8":                              return .iPhoneSE2
+        case "iPhone13,1":                              return .iPhone12Mini
+        case "iPhone13,2":                              return .iPhone12
+        case "iPhone13,3":                              return .iPhone12Pro
+        case "iPhone13,4":                              return .iPhone12ProMax
         /*** iPad ***/
         case "iPad3,1", "iPad3,2", "iPad3,3":           return .iPad3
         case "iPad3,4", "iPad3,5", "iPad3,6":           return .iPad4
         case "iPad6,11", "iPad6,12":                    return .iPad5
         case "iPad7,6":                                 return .iPad6
+        case "iPad7,11", "iPad7,12":                    return .iPad7
+        case "iPad11,6", "iPad11,7":                    return .iPad8
         case "iPad4,1", "iPad4,2", "iPad4,3":           return .iPadAir
         case "iPad5,3", "iPad5,4":                      return .iPadAir2
+        case "iPad11,3", "iPad11,4":                    return .iPadAir3
+        case "iPad13,1", "iPad13,2":                    return .iPadAir4
         case "iPad2,5", "iPad2,6", "iPad2,7":           return .iPadMini
         case "iPad4,4", "iPad4,5", "iPad4,6":           return .iPadMini2
         case "iPad4,7", "iPad4,8", "iPad4,9":           return .iPadMini3
         case "iPad5,1", "iPad5,2":                      return .iPadMini4
+        case "iPad11,1", "iPad11,2":                    return .iPadMini5
         case "iPad6,3", "iPad6,4":                      return .iPadPro9_7Inch
         case "iPad7,3", "iPad7,4":                      return .iPadPro10_5Inch
         case "iPad8,1", "iPad8,2", "iPad8,3", "iPad8,4":    return .iPadPro11Inch
+        case "iPad8,9", "iPad8,10":                     return .iPadPro11Inch2
         case "iPad6,7", "iPad6,8":                      return .iPadPro12_9Inch
         case "iPad7,1", "iPad7,2":                      return .iPadPro12_9Inch2
-        case "iPad8,7", "iPad8,8":                      return .iPadPro12_9Inch3
+        case "iPad8,5", "iPad8,6", "iPad8,7", "iPad8,8":    return .iPadPro12_9Inch3
+        case "iPad8,11", "iPad8,12":                    return .iPadPro12_9Inch4
         /*** HomePod ***/
         case "AudioAccessory1,1":                       return .HomePod
         /*** Simulator ***/
@@ -487,8 +518,9 @@ extension Device.Model: CustomStringConvertible {
         #if os(iOS)
         switch self {
         /*** iPod ***/
-        case .iPodTouch5Gen:        return "iPod Touch 5"
-        case .iPodTouch6Gen:        return "iPod Touch 6"
+        case .iPodTouch5Gen:        return "iPod Touch 5 Generation"
+        case .iPodTouch6Gen:        return "iPod Touch 6 Generation"
+        case .iPodTouch7Gen:        return "iPod Touch 7 Generation"
         /*** iPhone ***/
         case .iPhone4:              return "iPhone 4"
         case .iPhone4S:             return "iPhone 4s"
@@ -508,23 +540,38 @@ extension Device.Model: CustomStringConvertible {
         case .iPhoneXR:             return "iPhone XR"
         case .iPhoneXS:             return "iPhone XS"
         case .iPhoneXSMax:          return "iPhone XS Max"
+        case .iPhone11:             return "iPhone 11"
+        case .iPhone11Pro:          return "iPhone 11 Pro"
+        case .iPhone11ProMax:       return "iPhone 11 Pro Max"
+        case .iPhoneSE2:            return "iPhone SE 2 Generation"
+        case .iPhone12Mini:         return "iPhone 12 Mini"
+        case .iPhone12:             return "iPhone 12"
+        case .iPhone12Pro:          return "iPhone 12 Pro"
+        case .iPhone12ProMax:       return "iPhone 12 Pro Max"
         /*** iPad ***/
         case .iPad3:                return "iPad 3"
         case .iPad4:                return "iPad 4"
         case .iPad5:                return "iPad 5"
         case .iPad6:                return "iPad 6"
+        case .iPad7:                return "iPad 7"
+        case .iPad8:                return "iPad 8"
         case .iPadAir:              return "iPad Air"
         case .iPadAir2:             return "iPad Air 2"
+        case .iPadAir3:             return "iPad Air 3"
+        case .iPadAir4:             return "iPad Air 4"
         case .iPadMini:             return "iPad Mini"
         case .iPadMini2:            return "iPad Mini 2"
         case .iPadMini3:            return "iPad Mini 3"
         case .iPadMini4:            return "iPad Mini 4"
+        case .iPadMini5:            return "iPad Mini 5"
         case .iPadPro9_7Inch:       return "iPad Pro (9.7-inch)"
         case .iPadPro10_5Inch:      return "iPad Pro (10.5-inch)"
         case .iPadPro11Inch:        return "iPad Pro (11-inch)"
+        case .iPadPro11Inch2:       return "iPad Pro (11-inch) 2 Generation"
         case .iPadPro12_9Inch:      return "iPad Pro (12.9-inch)"
-        case .iPadPro12_9Inch2:     return "iPad Pro (12.9-inch) 2"
-        case .iPadPro12_9Inch3:     return "iPad Pro (12.9-inch) 3"
+        case .iPadPro12_9Inch2:     return "iPad Pro (12.9-inch) 2 Generation"
+        case .iPadPro12_9Inch3:     return "iPad Pro (12.9-inch) 3 Generation"
+        case .iPadPro12_9Inch4:     return "iPad Pro (12.9-inch) 4 Generation"
         /*** HomePod ***/
         case .HomePod:              return "HomePod"
         /*** Simulator ***/
