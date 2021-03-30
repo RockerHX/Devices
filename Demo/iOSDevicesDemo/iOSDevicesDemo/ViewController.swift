@@ -25,6 +25,8 @@ class ViewController: UIViewController {
         iOSBrightness()
         iOSBattery()
         iOSApplication()
+
+        print("Device is Fringe:\(Device.isFringe)")
         #elseif os(OSX)
 
         #elseif os(tvOS)
@@ -59,6 +61,8 @@ class ViewController: UIViewController {
         case .iPodTouch5Gen:
             print("Device is a \(model)")
         case .iPodTouch6Gen:
+            print("Device is a \(model)")
+        case .iPodTouch7Gen:
             print("Device is a \(model)")
         /*** iPhone ***/
         case .iPhone4:
@@ -97,6 +101,22 @@ class ViewController: UIViewController {
             print("Device is a \(model)")
         case .iPhoneXSMax:
             print("Device is a \(model)")
+        case .iPhone11:
+            print("Device is a \(model)")
+        case .iPhone11Pro:
+            print("Device is a \(model)")
+        case .iPhone11ProMax:
+            print("Device is a \(model)")
+        case .iPhoneSE2:
+            print("Device is a \(model)")
+        case .iPhone12Mini:
+            print("Device is a \(model)")
+        case .iPhone12:
+            print("Device is a \(model)")
+        case .iPhone12Pro:
+            print("Device is a \(model)")
+        case .iPhone12ProMax:
+            print("Device is a \(model)")
         /*** iPad ***/
         case .iPad3:
             print("Device is a \(model)")
@@ -106,9 +126,17 @@ class ViewController: UIViewController {
             print("Device is a \(model)")
         case .iPad6:
             print("Device is a \(model)")
+        case .iPad7:
+            print("Device is a \(model)")
+        case .iPad8:
+            print("Device is a \(model)")
         case .iPadAir:
             print("Device is a \(model)")
         case .iPadAir2:
+            print("Device is a \(model)")
+        case .iPadAir3:
+            print("Device is a \(model)")
+        case .iPadAir4:
             print("Device is a \(model)")
         case .iPadMini:
             print("Device is a \(model)")
@@ -118,17 +146,23 @@ class ViewController: UIViewController {
             print("Device is a \(model)")
         case .iPadMini4:
             print("Device is a \(model)")
+        case .iPadMini5:
+            print("Device is a \(model)")
         case .iPadPro9_7Inch:
             print("Device is a \(model)")
         case .iPadPro10_5Inch:
             print("Device is a \(model)")
         case .iPadPro11Inch:
             print("Device is a \(model)")
+        case .iPadPro11Inch2:
+            print("Device is a \(model)")
         case .iPadPro12_9Inch:
             print("Device is a \(model)")
         case .iPadPro12_9Inch2:
             print("Device is a \(model)")
         case .iPadPro12_9Inch3:
+            print("Device is a \(model)")
+        case .iPadPro12_9Inch4:
             print("Device is a \(model)")
         /*** HomePod ***/
         case .HomePod:
