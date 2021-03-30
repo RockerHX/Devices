@@ -283,6 +283,20 @@ extension Device {
         return getModel(byCode: code())
     }
 
+    #if os(iOS)
+    static public var isFringe: Bool {
+        let model = self.model()
+        switch model {
+        case .iPhone4, .iPhone4S, .iPhone5, .iPhone5C, .iPhone5S, .iPhone6, .iPhone6Plus, .iPhone6S, .iPhone6SPlus, .iPhone7, .iPhone7Plus, .iPhone8, .iPhone8Plus, .iPhoneSE, .iPhoneSE2:
+            return false
+        case .simulator(.iPhone4), .simulator(.iPhone4S), .simulator(.iPhone5), .simulator(.iPhone5C), .simulator(.iPhone5S), .simulator(.iPhone6), .simulator(.iPhone6Plus), .simulator(.iPhone6S), .simulator(.iPhone6SPlus), .simulator(.iPhone7), .simulator(.iPhone7Plus), .simulator(.iPhone8), .simulator(.iPhone8Plus), .simulator(.iPhoneSE), .simulator(.iPhoneSE2):
+            return false
+        default:
+            return true
+        }
+    }
+    #endif
+
 }
 
 
