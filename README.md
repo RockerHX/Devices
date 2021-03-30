@@ -2,8 +2,9 @@
 
 [![Version](https://img.shields.io/cocoapods/v/Devices.svg)](http://cocoapods.org/pods/Devices)
 ![Swift4.0](https://img.shields.io/badge/Swift-4.0-orange.svg?style=flat)
-![Swift4.1](https://img.shields.io/badge/Swift-4.1-orange.svg?style=flat)
-![Swift4.2](https://img.shields.io/badge/Swift-4.2-orange.svg?style=flat)
+![Swift5.0](https://img.shields.io/badge/Swift-5.0-orange.svg?style=flat)
+![Swift5.1](https://img.shields.io/badge/Swift-5.1-orange.svg?style=flat)
+![Swift5.2](https://img.shields.io/badge/Swift-5.2-orange.svg?style=flat)
 ![Xcode](https://img.shields.io/badge/Xcode-9.0-orange.svg?style=flat)
 [![Platform](https://img.shields.io/cocoapods/p/Devices.svg?style=flat)](http://cocoapods.org/pods/Devices)
 ![Supported](https://img.shields.io/badge/Supported-iOS9%20%7C%20OSX%2010.11%20%7C%20tvOS%209.0%20%7C%20watchOS%202.0-4BC51D.svg?style=flat)
@@ -12,7 +13,8 @@
 | Branch | Build Status | Versions |
 |:---------|:--------------:|:----------:|
 | **master** |[![Build Status](https://travis-ci.org/dennisweissmann/DeviceKit.svg?branch=master)](https://travis-ci.org/dennisweissmann/DeviceKit)| - |
-| **Swift 5.0** |[![Build Status](https://travis-ci.org/dennisweissmann/DeviceKit.svg?branch=swift-4.2)](https://travis-ci.org/dennisweissmann/DeviceKit)| ≥ 1.0.0 |
+| **Swift 5.2** |[![Build Status](https://travis-ci.org/dennisweissmann/DeviceKit.svg?branch=swift-5.2)](https://travis-ci.org/dennisweissmann/DeviceKit)| ≥ 1.1.0 |
+| **Swift 5.0** |[![Build Status](https://travis-ci.org/dennisweissmann/DeviceKit.svg?branch=swift-5.0)](https://travis-ci.org/dennisweissmann/DeviceKit)| ≥ 1.0.0 |
 | **Swift 4.2** |[![Build Status](https://travis-ci.org/dennisweissmann/DeviceKit.svg?branch=swift-4.2)](https://travis-ci.org/dennisweissmann/DeviceKit)| ≥ 0.8.0 |
 | **Below Swift 4.2** |[![Build Status](https://travis-ci.org/dennisweissmann/DeviceKit.svg?branch=swift-4)](https://travis-ci.org/dennisweissmann/DeviceKit)| < 0.7.2 |
 
@@ -206,6 +208,7 @@ func iOSBattery() {
 iOS Simple code:
 ```swift
 func iOSApplication() {
+    print("Device is Fringe:\(Device.isFringe)")
     print("Build: \(Device.Application.shared.build)")
     print("Version: \(Device.Application.shared.version)")
     print("Name: \(Device.Application.shared.name)")

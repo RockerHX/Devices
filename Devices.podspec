@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Devices"
-  s.version      = "1.0.0"
+  s.version      = "1.1.0"
   s.summary      = "Devices can detect the current  device base system information. Support iOS, OSX, tvOS, watchOS."
 
   # This description is used to generate tags and improve search results.
@@ -71,7 +71,7 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target = "12.2"
   s.watchos.deployment_target = "5.2"
   
-  s.swift_version = "5.0"
+  s.swift_version = "5.2"
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
