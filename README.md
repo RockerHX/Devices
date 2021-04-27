@@ -62,6 +62,13 @@ func iOSDeviceFamily() {
     }
 }
 ```
+
+```Swift
+if Device.isFringe {
+    code...
+}
+```
+
 Demo code:
 [Family Demo Code](/Document/iOS/Family.md)
 
