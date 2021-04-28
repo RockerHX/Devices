@@ -5,6 +5,7 @@
 //  Created by RockerHX on 2018/4/24.
 //
 
+import Foundation
 
 extension Device {
 
